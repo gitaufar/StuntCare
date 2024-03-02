@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">raon</string>
+    <string name="app_name">AntiStunt</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+
 </resources>
