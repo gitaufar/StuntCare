@@ -23,27 +23,30 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginStart="64dp">
+        android:layout_marginStart="64dp"
+        android:orientation="horizontal">
+
         <ImageView
             android:layout_width="52dp"
             android:layout_height="52dp"
-            android:src="@drawable/icon"/>
+            android:src="@drawable/icon" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Stunt"
             android:paddingTop="15dp"
+            android:text="Stunt"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Care"
+            android:textColor="@color/icon_color"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="@color/icon_color"/>
-        
+            android:textStyle="bold" />
+
     </LinearLayout>
 
     <TextView
@@ -62,29 +65,29 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:text="Our app provides comprehensive tracking and\nguidance for pregnant mothers,ensuring optimal\nhealth and preventing stunting in their children"
-        android:textColor="@color/text_color"
-        />
+        android:textColor="@color/text_color" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLogin"
         android:layout_width="297dp"
         android:layout_height="46dp"
-        android:text="@string/login"
-        android:textStyle="bold"
         android:layout_marginStart="63dp"
         android:layout_marginTop="10dp"
-         />
+        android:textColor="@color/white"
+        android:background="@drawable/border2"
+        android:text="@string/login"
+        android:textStyle="bold" />
 
-    <Button
-
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginTop="8dp"
         android:id="@+id/btnRegister"
         android:layout_width="297dp"
         android:layout_height="46dp"
-        android:text="@string/register"
-        android:textColor="@color/white"
-        android:textStyle="bold"
         android:layout_marginStart="63dp"
-         />
+        android:background="@drawable/border"
+        android:text="@string/register"
+        android:textColor="@color/text_color"
+        android:textStyle="bold" />
 
 
 </LinearLayout>
