@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">AntiStunt</string>
+    <string name="app_name">StuntCare</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
-    <string name="create">First, let’s create your account</string>
+    <string name="create">First, let\’s create your account</string>
     <string name="registerGoogle">Register with Google</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
