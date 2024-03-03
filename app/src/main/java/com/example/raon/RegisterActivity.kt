@@ -1,50 +1,59 @@
 package com.example.raon
 
 
-
-
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.CheckBox
+import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.raon.databinding.ActivityRegisterBinding
-
 import com.google.firebase.auth.FirebaseAuth
+
 class RegisterActivity : AppCompatActivity() {
-    private lateinit var binding:ActivityRegisterBinding
+//    private lateinit var binding:ActivityRegisterBinding
+//    private lateinit var binding: ActivityRegisterBinding
     private lateinit var firebaseAuth: FirebaseAuth
+//    private lateint var btnReg: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_register)
 
-        binding = ActivityRegisterBinding.inflate(layoutInflater)
         enableEdgeToEdge()
-        setContentView(binding.root)
-
+//        setContentView(binding.root)
         firebaseAuth = FirebaseAuth.getInstance()
 
-        binding.RBtn1.setOnClickListener{
-            val email = binding.RTxtEmail.text.toString()
-            val pass = binding.RTxtPassword.text.toString()
-            val confirmPass = binding.RTxtConfirmPassword.text.toString()
+//        btnReg = findViewById(R.id.R_btn_1)
+        val emailEditText = findViewById<EditText>(R.id.editTextText)
+        val passwordEditText = findViewById<EditText>(R.id.editTextText2)
+        val confirmPasswordEditText = findViewById<EditText>(R.id.editTextText3)
+        val registerButton = findViewById<Button>(R.id.button)
+        val termsCheckBox = findViewById<CheckBox>(R.id.check_id)
+
+//        binding.RBtn1.setOnClickListener{
+        registerButton.setOnClickListener{
+            val email = emailEditText.text.toString()
+            val pass = passwordEditText.text.toString()
+            val confirmPass = confirmPasswordEditText.text.toString()
 
             if(email.isNotEmpty() && pass.isNotEmpty() && confirmPass.isNotEmpty()){
                 if (pass == confirmPass){
-                    firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener{
-                        if(it.isSuccessful){
-                            val intent = Intent(this , RegisterActivity::class.java)
+                    firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener{ task ->
+                        if(task.isSuccessful){
+                            val intent = Intent(this@RegisterActivity, RegisterActivity::class.java)
                             startActivity(intent)
                         }else{
-                            Toast.makeText(this , it.exception.toString() , Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@RegisterActivity, task.exception.toString(), Toast.LENGTH_SHORT).show()
                         }
                     }
                 }else{
-                    Toast.makeText(this , "Password is not matching" , Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@RegisterActivity, "Password is not matching", Toast.LENGTH_SHORT).show()
                 }
             }else{
-                Toast.makeText(this , "Empty Fields Are Not Allowed !!" , Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@RegisterActivity , "Empty Fields Are Not Allowed " , Toast.LENGTH_SHORT).show()
             }
         }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
