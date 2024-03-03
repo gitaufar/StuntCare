@@ -2,5 +2,14 @@
     <string name="app_name">AntiStunt</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
+    <string name="create">First, let’s create your account</string>
+    <string name="registerGoogle">Register with Google</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="alreadyAccount">Already have an account, Log in</string>
+    <string name="inputEmail">Input your email</string>
+    <string name="inputPassword">Input your password</string>
+    <string name="inputPasswordAgain">Input your password again</string>
 
 </resources>
