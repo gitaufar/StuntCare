@@ -20,13 +20,13 @@
         android:textSize="20sp"
         android:fontFamily="@font/poppins_bold"
         android:textStyle="bold"
-        android:textColor="@color/text_color"/>
+        android:textColor="@color/text_color_register"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="20dp"
         android:text="please enter your email and password"
         android:textSize="14sp"
-        android:textColor="@color/text_color"/>
+        android:textColor="@color/text_color_register"/>
 
     <TextView
         android:layout_marginTop="10dp"
@@ -36,7 +36,7 @@
         android:fontFamily="@font/poppins_semibold"
         android:textSize="16sp"
         android:textStyle=""
-        android:textColor="@color/text_color"/>
+        android:textColor="@color/text_color_register"/>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="297dp"
         android:layout_height="46dp">
@@ -58,10 +58,11 @@
         android:fontFamily="@font/poppins_semibold"
         android:textSize="16sp"
         android:textStyle=""
-        android:textColor="@color/text_color"/>
+        android:textColor="@color/text_color_register"/>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="297dp"
-        android:layout_height="46dp">
+        android:layout_height="46dp"
+        app:passwordToggleEnabled="true">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPasswordLogin"
             android:layout_width="match_parent"

@@ -56,7 +56,7 @@
         android:layout_marginTop="10dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Empowering Moms\nNurturing Future Generation"
-        android:textColor="@color/text_color"
+        android:textColor="@color/text_color_register"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:text="Our app provides comprehensive tracking and\nguidance for pregnant mothers,ensuring optimal\nhealth and preventing stunting in their children"
-        android:textColor="@color/text_color" />
+        android:textColor="@color/text_color_register" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLogin"
