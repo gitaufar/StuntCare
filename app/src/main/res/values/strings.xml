@@ -12,5 +12,10 @@
     <string name="inputPassword">Input your password</string>
     <string name="inputPasswordAgain">Input your password again</string>
     <string name="termCondition">I agree with the terms of service and privacy policy</string>
+    <string name="google">Register with Google</string>
+    <string name="or">OR</string>
+    <string name="registerr">Registerr</string>
+    <string name="default_web_client_id" translatable="false">161975354193-gjue1on9noopf2277ull07enonpo39lh.apps.googleusercontent.com</string>
+
 
 </resources>

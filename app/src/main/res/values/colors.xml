@@ -5,6 +5,8 @@
     <color name="text_color">#3700B3</color>
     <color name="icon_color">#EE479A</color>
     <color name="text_color_register">#6420AA</color>
+    <color name="blue">#459DE4</color>
+    <color name="red">#FF0000</color>
 
 
 </resources>

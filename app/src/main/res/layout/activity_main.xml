@@ -70,20 +70,20 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLogin"
         android:layout_width="297dp"
-        android:layout_height="46dp"
+        android:layout_height="48dp"
         android:layout_marginStart="63dp"
         android:layout_marginTop="10dp"
-        android:textColor="@color/white"
         android:background="@drawable/border2"
         android:text="@string/login"
+        android:textColor="@color/white"
         android:textStyle="bold" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_marginTop="8dp"
         android:id="@+id/btnRegister"
         android:layout_width="297dp"
-        android:layout_height="46dp"
+        android:layout_height="48dp"
         android:layout_marginStart="63dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/border"
         android:text="@string/register"
         android:textColor="@color/text_color"
@@ -91,3 +91,4 @@
 
 
 </LinearLayout>
+
