@@ -3,6 +3,7 @@ package com.example.stuntcare
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.raon.R
@@ -19,6 +20,13 @@ class LoginActivity : AppCompatActivity() {
         val btnLogin: Button = findViewById(R.id.login)
         val etPass : TextInputEditText = findViewById(R.id.etPasswordLogin)
         val etEmail: TextInputEditText = findViewById(R.id.etEmailLogin)
+        val register: TextView = findViewById(R.id.register)
+
+        register.setOnClickListener(){
+            Intent(this, RegisterActivity::class.java).also{
+                startActivity(it)
+            }
+        }
         
         btnLogin.setOnClickListener(){
             val email: String = etEmail.text.toString()

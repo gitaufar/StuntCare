@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/splash_bg"
     tools:context="com.example.stuntcare.MainActivity">
 
 
@@ -13,18 +14,23 @@
         android:layout_width="200dp"
         android:layout_height="221dp"
         android:layout_marginStart="104dp"
-        android:layout_marginTop="149dp"
+        android:layout_marginTop="157dp"
         android:layout_marginEnd="96dp"
-        android:src="@drawable/ibu_hamil"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:src="@drawable/ibu_hamil" />
+
+    <LinearLayout
+        android:background="@drawable/pemisah"
+        android:layout_width="match_parent"
+        android:layout_height="1000dp"
+        android:orientation="vertical"
+        android:layout_marginTop="25dp">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
 
         <ImageView
             android:layout_width="52dp"
@@ -37,6 +43,7 @@
             android:paddingTop="15dp"
             android:text="Stunt"
             android:textSize="20sp"
+            android:textColor="@color/text_color_register"
             android:textStyle="bold" />
 
         <TextView
@@ -64,19 +71,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
+        android:fontFamily="@font/poppins_rg"
         android:text="Our app provides comprehensive tracking and\nguidance for pregnant mothers,ensuring optimal\nhealth and preventing stunting in their children"
-        android:textColor="@color/text_color_register" />
+        android:textColor="@color/text_color_register"
+        android:textSize="12sp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLogin"
         android:layout_width="297dp"
         android:layout_height="46dp"
         android:layout_marginStart="63dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:textColor="@color/white"
         android:background="@drawable/border2"
-        android:text="@string/login"
-        android:textStyle="bold" />
+        android:text="@string/register"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins_bold"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_marginTop="8dp"
@@ -85,9 +96,12 @@
         android:layout_height="46dp"
         android:layout_marginStart="63dp"
         android:background="@drawable/border"
-        android:text="@string/register"
-        android:textColor="@color/text_color"
-        android:textStyle="bold" />
+        android:text="@string/login"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/text_color"/>
+    </LinearLayout>
 
 
 </LinearLayout>
