@@ -1,13 +1,14 @@
-package com.example.stuntcare
+//package com.example.stuntcare
+package com.example.raon
 
-import RegisterActivity
+
+
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.raon.R
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
@@ -36,7 +37,7 @@ class LoginActivity : AppCompatActivity() {
             if(email.isNotEmpty() && pass.isNotEmpty()){
                 auth.signInWithEmailAndPassword(email,pass).addOnCompleteListener(OnCompleteListener{
                     if(it.isSuccessful){
-                        val intent = Intent(this,HomeActivity::class.java)
+                        val intent = Intent(this, HomeActivity::class.java)
                         Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
                         startActivity(intent)
                         finish()

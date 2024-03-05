@@ -1,8 +1,7 @@
-package com.example.stuntcare
+package com.example.raon
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.raon.R
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
