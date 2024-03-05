@@ -62,10 +62,5 @@ class RegisterActivity : AppCompatActivity() {
             }
         }
 
-//        if (currentUser != null) {
-//            val intent = Intent(this, HomeActivity::class.java)
-//            startActivity(intent)
-//            finish()
-//        }
     }
 }

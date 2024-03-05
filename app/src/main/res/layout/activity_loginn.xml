@@ -38,17 +38,20 @@
         android:textSize="16sp"
         android:textStyle=""
         android:textColor="@color/text_color_register"/>
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="297dp"
-        android:layout_height="wrap_content">
-        <com.google.android.material.textfield.TextInputEditText
+
+        <EditText
             android:id="@+id/etEmailLogin"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="297dp"
+            android:layout_height="48dp"
             android:hint="input your email"
+            android:textSize="16sp"
+            android:paddingLeft="24dp"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/text_color_register"
+            android:fontFamily="@font/poppins_rg"
             android:background="@drawable/border"/>
 
-    </com.google.android.material.textfield.TextInputLayout>
+
 
 
     <TextView
@@ -61,18 +64,17 @@
         android:textStyle=""
         android:textColor="@color/text_color_register"/>
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
+        android:id="@+id/etPasswordLogin"
         android:layout_width="297dp"
-        android:layout_height="wrap_content"
-        app:passwordToggleEnabled="true">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPasswordLogin"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="input your password"
-            android:background="@drawable/border"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_height="48dp"
+        android:hint="input your password"
+        android:textSize="16sp"
+        android:paddingLeft="24dp"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/text_color_register"
+        android:fontFamily="@font/poppins_rg"
+        android:background="@drawable/border"/>
 
     <LinearLayout
         android:layout_width="wrap_content"

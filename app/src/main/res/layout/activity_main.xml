@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/splash_bg"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -21,10 +22,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:background="@drawable/pemisah"
+        android:layout_width="match_parent"
+        android:layout_height="1000dp"
+        android:orientation="vertical"
+        android:layout_marginTop="25dp">
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
 
         <ImageView
             android:layout_width="52dp"
@@ -89,6 +98,6 @@
         android:textColor="@color/text_color"
         android:textStyle="bold" />
 
-
+    </LinearLayout>
 </LinearLayout>
 
