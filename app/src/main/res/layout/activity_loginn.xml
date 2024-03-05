@@ -82,7 +82,7 @@
 
         <CheckBox
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:text="Remember me"
             android:fontFamily="@font/poppins_rg"
             android:textSize="14sp"
@@ -103,7 +103,7 @@
         android:id="@+id/login"
         android:layout_marginTop="10dp"
         android:layout_width="297dp"
-        android:layout_height="46dp"
+        android:layout_height="48dp"
         android:background="@drawable/border2"
         android:textColor="@color/white"
         android:text="Login"/>
