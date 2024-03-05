@@ -1,6 +1,7 @@
 package com.example.raon
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
@@ -13,7 +14,15 @@ class MainActivity : AppCompatActivity() {
         val register: AppCompatButton = findViewById(R.id.btnRegister)
 
         login.setOnClickListener(){
+            Intent(this,LoginActivity::class.java).also{
+                startActivity(it)
+            }
+        }
 
+        register.setOnClickListener(){
+            Intent(this,RegisterActivity::class.java).also{
+                startActivity(it)
+            }
         }
     }
 }

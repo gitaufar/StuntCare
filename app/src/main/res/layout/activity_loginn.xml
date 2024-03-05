@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="48dp"
-    tools:context="com.example.stuntcare.LoginActivity">
+    android:layout_marginStart="48dp"
+    tools:context=".LoginActivity">
     <ImageView
         android:layout_width="108dp"
         android:layout_height="133dp"
@@ -82,16 +82,16 @@
 
         <CheckBox
             android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:text="Remember me"
             android:fontFamily="@font/poppins_rg"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:textColor="@color/text_color_register"/>
         
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:layout_marginStart="60dp"
             android:text="Forgot Password?"
             android:textColor="@color/text_color_register"
@@ -116,7 +116,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="297dp"
-        android:layout_height="46dp"
+        android:layout_height="48dp"
         android:background="@drawable/border"
         android:layout_marginTop="20dp"
         android:text="Register with Google"

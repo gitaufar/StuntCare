@@ -1,5 +1,4 @@
 package com.example.raon
-import com.google.firebase.auth.ktx.auth
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -17,6 +16,7 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
+        val firebaseAuth = FirebaseAuth.getInstance()
         val currentUser = firebaseAuth.currentUser
         val emailEditText = findViewById<EditText>(R.id.editTextText)
         val passwordEditText = findViewById<EditText>(R.id.editTextText2)
@@ -35,7 +35,7 @@ class RegisterActivity : AppCompatActivity() {
                         .addOnCompleteListener { task ->
                             if (task.isSuccessful) {
                                 val intent =
-                                    Intent(this@RegisterActivity, RegisterActivity::class.java)
+                                    Intent(this@RegisterActivity, LoginActivity::class.java)
                                 startActivity(intent)
                                 finish()
                             } else {
@@ -62,10 +62,10 @@ class RegisterActivity : AppCompatActivity() {
             }
         }
 
-        if (currentUser != null) {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
+//        if (currentUser != null) {
+//            val intent = Intent(this, HomeActivity::class.java)
+//            startActivity(intent)
+//            finish()
+//        }
     }
 }
