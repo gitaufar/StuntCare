@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="108dp"
         android:layout_height="133dp"
-        android:layout_gravity="center"
+        android:layout_marginLeft="94dp"
         android:layout_marginTop="93dp"
         android:src="@drawable/icon2" />
     <TextView
@@ -70,8 +70,8 @@
         android:layout_height="48dp"
         android:hint="input your password"
         android:textSize="16sp"
-        android:paddingLeft="24dp"
-        android:inputType="textEmailAddress"
+        android:paddingStart="24dp"
+        android:inputType="textPassword"
         android:textColor="@color/text_color_register"
         android:fontFamily="@font/poppins_rg"
         android:background="@drawable/border"/>

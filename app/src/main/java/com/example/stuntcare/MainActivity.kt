@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
         val login: AppCompatButton = findViewById(R.id.btnLogin)
         val register: AppCompatButton = findViewById(R.id.btnRegister)
 
+
+
         login.setOnClickListener(){
             Intent(this,LoginActivity::class.java).also{
                 startActivity(it)
@@ -28,14 +30,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onStart() {
 
-        firebaseAuth = FirebaseAuth.getInstance()
-        super.onStart()
-        if (firebaseAuth.currentUser != null) {
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-    }
 }

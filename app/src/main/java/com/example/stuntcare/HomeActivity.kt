@@ -15,6 +15,27 @@ class HomeActivity : AppCompatActivity() {
 
         val auth = FirebaseAuth.getInstance()
         val btnLogout: Button = findViewById(R.id.logout)
+//
+//        val database = Firebase.database
+//        val myRef = database.getReference("message")
+//
+//        myRef.setValue("Hello, World!")
+//
+//        val firebaseAuth = FirebaseAuth.getInstance()
+//
+//        val currentUser = firebaseAuth.currentUser
+//        currentUser?.displayName
+//
+//        val newReference = database.getReference("orang")
+//
+//        val orang = object{
+//            val uid = currentUser?.uid
+//            val umur = 17
+//        }
+//
+//        newReference.child(orang.uid!!).setValue(orang.umur)
+
+
 
         btnLogout.setOnClickListener(){
             auth.signOut()
