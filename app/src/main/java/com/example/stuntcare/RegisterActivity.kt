@@ -6,6 +6,7 @@ import android.text.method.PasswordTransformationMethod
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -24,7 +25,7 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        val firebaseAuth = FirebaseAuth.getInstance()
+        firebaseAuth = FirebaseAuth.getInstance()
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
@@ -42,6 +43,7 @@ class RegisterActivity : AppCompatActivity() {
         val showHidePassword1 = findViewById<EditText>(R.id.editTextText2)
         val showHidePassword2 = findViewById<EditText>(R.id.editTextText3)
         val btnRegGoogle = findViewById<Button>(R.id.button3)
+        val loginButton = findViewById<TextView>(R.id.textView8)
 
         showHidePassword1.setOnClickListener {
             togglePasswordVisibility(passwordEditText)
@@ -51,43 +53,57 @@ class RegisterActivity : AppCompatActivity() {
             togglePasswordVisibility(confirmPasswordEditText)
         }
 
-        btnRegGoogle.setOnClickListener { // Baris ke-46
+        btnRegGoogle.setOnClickListener {
             signInWithGoogle()
+        }
+
+        loginButton.setOnClickListener {
+            val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
         registerButton.setOnClickListener {
             val email = emailEditText.text.toString()
             val pass = passwordEditText.text.toString()
             val confirmPass = confirmPasswordEditText.text.toString()
+            val isChecked = checkBox.isChecked
 
-            if (email.isNotEmpty() && pass.isNotEmpty() && confirmPass.isNotEmpty()) {
-                if (pass == confirmPass) {
-                    firebaseAuth.createUserWithEmailAndPassword(email, pass)
-                        .addOnCompleteListener { task ->
-                            if (task.isSuccessful) {
-                                val intent =
-                                    Intent(this@RegisterActivity, LoginActivity::class.java)
-                                startActivity(intent)
-                                finish()
-                            } else {
-                                Toast.makeText(
-                                    this@RegisterActivity,
-                                    task.exception?.message ?: "Registration failed",
-                                    Toast.LENGTH_SHORT
-                                ).show()
+            if (isChecked) {
+                if (email.isNotEmpty() && pass.isNotEmpty() && confirmPass.isNotEmpty()) {
+                    if (pass == confirmPass) {
+                        firebaseAuth.createUserWithEmailAndPassword(email, pass)
+                            .addOnCompleteListener { task ->
+                                if (task.isSuccessful) {
+                                    val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+                                    startActivity(intent)
+                                    finish()
+                                } else {
+                                    Toast.makeText(
+                                        this@RegisterActivity,
+                                        task.exception?.message ?: "Registration failed",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                }
                             }
-                        }
+                    } else {
+                        Toast.makeText(
+                            this@RegisterActivity,
+                            "Password is not matching",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
                 } else {
                     Toast.makeText(
                         this@RegisterActivity,
-                        "Password is not matching",
+                        "Empty Fields Are Not Allowed ",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
             } else {
                 Toast.makeText(
                     this@RegisterActivity,
-                    "Empty Fields Are Not Allowed ",
+                    "Please check the Terms & Conditions",
                     Toast.LENGTH_SHORT
                 ).show()
             }
@@ -137,11 +153,9 @@ class RegisterActivity : AppCompatActivity() {
         firebaseAuth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // Sign-in success, update UI with the signed-in user's information
                     val user = firebaseAuth.currentUser
                     // TODO: Handle successful sign-in
                 } else {
-                    // Sign-in failed
                     Toast.makeText(this, "Google Sign-In failed", Toast.LENGTH_SHORT).show()
                 }
             }
@@ -151,5 +165,3 @@ class RegisterActivity : AppCompatActivity() {
         private const val RC_SIGN_IN = 9001
     }
 }
-
-
