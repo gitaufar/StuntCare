@@ -46,8 +46,6 @@ class RegisterActivity : AppCompatActivity() {
         val loginButton = findViewById<TextView>(R.id.textView8)
 
 
-
-
         showHidePassword1.setOnClickListener {
             togglePasswordVisibility(passwordEditText)
         }
