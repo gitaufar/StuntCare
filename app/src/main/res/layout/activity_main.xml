@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/splash_bg"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -21,10 +22,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:background="@drawable/pemisah"
+        android:layout_width="match_parent"
+        android:layout_height="1000dp"
+        android:orientation="vertical"
+        android:layout_marginTop="25dp">
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
 
         <ImageView
             android:layout_width="52dp"
@@ -36,8 +45,9 @@
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
             android:text="Stunt"
+            android:textColor="@color/text_color_register"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/poppins_bold" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -45,7 +55,7 @@
             android:text="Care"
             android:textColor="@color/icon_color"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/poppins_bold" />
 
     </LinearLayout>
 
@@ -53,26 +63,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="36dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Empowering Moms\nNurturing Future Generation"
-        android:textColor="@color/text_color"
+        android:textColor="@color/text_color_register"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
+        android:fontFamily="@font/poppins_rg"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
+        android:textSize="12sp"
         android:text="Our app provides comprehensive tracking and\nguidance for pregnant mothers,ensuring optimal\nhealth and preventing stunting in their children"
-        android:textColor="@color/text_color" />
+        android:textColor="@color/text_color_register" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLogin"
         android:layout_width="297dp"
         android:layout_height="48dp"
         android:layout_marginStart="63dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/border2"
         android:text="@string/login"
         android:textColor="@color/white"
@@ -83,12 +95,12 @@
         android:layout_width="297dp"
         android:layout_height="48dp"
         android:layout_marginStart="63dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/border"
         android:text="@string/register"
         android:textColor="@color/text_color"
         android:textStyle="bold" />
 
-
+    </LinearLayout>
 </LinearLayout>
 

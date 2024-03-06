@@ -6,6 +6,7 @@ package com.example.raon
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -20,8 +21,8 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_loginn)
         val auth = FirebaseAuth.getInstance()
         val btnLogin: Button = findViewById(R.id.login)
-        val etPass : TextInputEditText = findViewById(R.id.etPasswordLogin)
-        val etEmail: TextInputEditText = findViewById(R.id.etEmailLogin)
+        val etPass : EditText = findViewById(R.id.etPasswordLogin)
+        val etEmail: EditText = findViewById(R.id.etEmailLogin)
         val register: TextView = findViewById(R.id.register)
 
         register.setOnClickListener(){

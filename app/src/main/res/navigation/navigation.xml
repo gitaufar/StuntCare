@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_splashFragment_to_mainActivity2"
             app:destination="@id/mainActivity" />
+        <action
+            android:id="@+id/action_splashFragment_to_mainActivity3"
+            app:destination="@id/mainActivity" />
     </fragment>
     <activity
         android:id="@+id/mainActivity"
@@ -24,7 +27,7 @@
         tools:layout="@layout/activity_main" />
     <activity
         android:id="@+id/loginActivity"
-        android:name="com.example.stuntcare.LoginActivity"
+        android:name="com.example.raon.LoginActivity"
         android:label="activity_loginn"
         tools:layout="@layout/activity_loginn" />
     <activity
@@ -34,7 +37,7 @@
         tools:layout="@layout/activity_register" />
     <activity
         android:id="@+id/homeActivity"
-        android:name="com.example.stuntcare.HomeActivity"
+        android:name="com.example.raon.HomeActivity"
         android:label="activity_home"
         tools:layout="@layout/activity_home" />
 </navigation>
