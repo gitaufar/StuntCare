@@ -45,6 +45,9 @@ class RegisterActivity : AppCompatActivity() {
         val btnRegGoogle = findViewById<Button>(R.id.button3)
         val loginButton = findViewById<TextView>(R.id.textView8)
 
+
+
+
         showHidePassword1.setOnClickListener {
             togglePasswordVisibility(passwordEditText)
         }
