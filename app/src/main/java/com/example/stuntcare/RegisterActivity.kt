@@ -1,13 +1,18 @@
 package com.example.raon
-import com.google.firebase.auth.ktx.auth
+
 import android.content.Intent
 import android.os.Bundle
+
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+
 import android.widget.Toast
+
 import androidx.appcompat.app.AppCompatActivity
+
 import com.google.firebase.auth.FirebaseAuth
+
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -24,6 +29,8 @@ class RegisterActivity : AppCompatActivity() {
         val registerButton = findViewById<Button>(R.id.button)
         val termsCheckBox = findViewById<CheckBox>(R.id.check_id)
 
+        firebaseAuth = FirebaseAuth.getInstance()
+
         registerButton.setOnClickListener {
             val email = emailEditText.text.toString()
             val pass = passwordEditText.text.toString()
@@ -35,7 +42,7 @@ class RegisterActivity : AppCompatActivity() {
                         .addOnCompleteListener { task ->
                             if (task.isSuccessful) {
                                 val intent =
-                                    Intent(this@RegisterActivity, RegisterActivity::class.java)
+                                    Intent(this@RegisterActivity, MainActivity::class.java)
                                 startActivity(intent)
                                 finish()
                             } else {
