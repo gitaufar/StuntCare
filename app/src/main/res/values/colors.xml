@@ -6,5 +6,6 @@
     <color name="icon_color">#EE479A</color>
     <color name="text_color_register">#6420AA</color>
     <color name="splash_bg">#AD88C6</color>
+    <color name="black1">#0A0A0A</color>
 
 </resources>
