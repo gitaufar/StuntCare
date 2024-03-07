@@ -44,6 +44,7 @@ class RegisterActivity : AppCompatActivity() {
         val showHidePassword2 = findViewById<EditText>(R.id.editTextText3)
         val btnRegGoogle = findViewById<Button>(R.id.button3)
         val loginButton = findViewById<TextView>(R.id.textView8)
+        val login = findViewById<TextView>(R.id.textView8)
 
 
         showHidePassword1.setOnClickListener {
@@ -56,6 +57,12 @@ class RegisterActivity : AppCompatActivity() {
 
         btnRegGoogle.setOnClickListener {
             signInWithGoogle()
+        }
+
+        login.setOnClickListener(){
+            Intent(this, LoginActivity::class.java).also{
+                startActivity(it)
+            }
         }
 
         loginButton.setOnClickListener {
@@ -110,11 +117,6 @@ class RegisterActivity : AppCompatActivity() {
             }
         }
 
-        if (currentUser != null) {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
     }
 
     private fun togglePasswordVisibility(editText: EditText) {
@@ -155,7 +157,10 @@ class RegisterActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     val user = firebaseAuth.currentUser
-                    // TODO: Handle successful sign-in
+                    // TODO: Handle successful sign-in\
+                    Intent(this,HomeActivity::class.java).also{
+                        startActivity(it)
+                    }
                 } else {
                     Toast.makeText(this, "Google Sign-In failed", Toast.LENGTH_SHORT).show()
                 }
