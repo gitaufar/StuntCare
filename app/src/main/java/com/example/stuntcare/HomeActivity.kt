@@ -15,7 +15,7 @@ class HomeActivity : AppCompatActivity() {
 
         val auth = FirebaseAuth.getInstance()
         val btnLogout: Button = findViewById(R.id.logout)
-//
+
 //        val database = Firebase.database
 //        val myRef = database.getReference("message")
 //
