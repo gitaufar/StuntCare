@@ -4,15 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/button"
     tools:context=".RegisterActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
-        android:layout_width="393dp"
-        android:layout_height="852dp"
-        android:background="@drawable/button"
-        tools:context="RegisterActivity">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RegisterActivity">
 
 
         <ImageView
