@@ -22,7 +22,9 @@
     <string name="inputName">Input your full name</string>
     <string name="birthday">Birthday</string>
     <string name="antiStunting">Anti Stunting</string>
-    <string name="stuntCare">StuntCare anti stunting</string>
+    <string name="stunt">Stunt</string>
+    <string name="care">Care</string>
+    <string name="anti">anti stunting</string>
     <string name="inputYourData">Input your data and let the apps recomend your daily pregnancy needs.</string>
     <string name="inputData">Input Data</string>
 </resources>
