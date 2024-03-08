@@ -55,6 +55,13 @@
 <!--            </intent-filter>-->
         </activity>
 
+        <activity
+            android:name="com.example.stuntcare.PersonalData1"
+            android:exported="false"/>
+
+        <activity
+            android:name="com.example.stuntcare.AntiStunting2"
+            android:exported="false"/>
 
     </application>
 </manifest>
