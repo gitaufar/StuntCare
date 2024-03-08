@@ -4,7 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.database
 
 class HomeActivity : AppCompatActivity() {
 
@@ -16,25 +18,32 @@ class HomeActivity : AppCompatActivity() {
         val auth = FirebaseAuth.getInstance()
         val btnLogout: Button = findViewById(R.id.logout)
 
-//        val database = Firebase.database
-//        val myRef = database.getReference("message")
-//
-//        myRef.setValue("Hello, World!")
-//
-//        val firebaseAuth = FirebaseAuth.getInstance()
-//
-//        val currentUser = firebaseAuth.currentUser
-//        currentUser?.displayName
-//
-//        val newReference = database.getReference("orang")
-//
-//        val orang = object{
-//            val uid = currentUser?.uid
-//            val umur = 17
-//        }
-//
-//        newReference.child(orang.uid!!).setValue(orang.umur)
+        val database = Firebase.database
+        val myRef = database.getReference("message")
+        val ref = database.getReference("coba")
 
+        val user = object{
+            val data = 1
+            val alamat = "bogor"
+        }
+
+        ref.child("coba").setValue(user)
+
+        myRef.setValue("Hello, World!")
+
+        val firebaseAuth = FirebaseAuth.getInstance()
+
+        val currentUser = firebaseAuth.currentUser
+        currentUser?.displayName
+
+        val newReference = database.getReference(currentUser?.uid!!)
+
+        val orang = object{
+            val nama = "aufar"
+            val umur = 17
+        }
+
+        newReference.setValue(orang)
 
 
         btnLogout.setOnClickListener(){
