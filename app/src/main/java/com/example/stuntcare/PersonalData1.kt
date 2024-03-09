@@ -27,7 +27,7 @@ class PersonalData1 : AppCompatActivity() {
                 val data = object {
                     var nama = etNama.text.toString()
                 }
-                ref.child("data").setValue(data)
+                ref.setValue(data)
                 Intent(this,AntiStunting2::class.java).also{
                     startActivity(it)
                 }

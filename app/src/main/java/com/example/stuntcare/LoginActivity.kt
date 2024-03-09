@@ -12,7 +12,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
-import com.example.stuntcare.AntiStunting2
 import com.example.stuntcare.PersonalData1
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -62,11 +61,11 @@ class LoginActivity : AppCompatActivity() {
             if(email.isNotEmpty() && pass.isNotEmpty()){
                 auth.signInWithEmailAndPassword(email,pass).addOnCompleteListener(OnCompleteListener{
                     if(it.isSuccessful){
-                        val currentUser = firebaseAuth.currentUser
+                        val currentUser = auth.currentUser
                         val ref = database.getReference(currentUser?.uid!!)
                         ref.child("nama").get().addOnSuccessListener {
-                            if(ref.child("nama").get().equals("")) {
-                                val intent = Intent(this, AntiStunting2::class.java)
+                            if(it.exists()) {
+                                val intent = Intent(this, HomeActivity::class.java)
                                 Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
                                 startActivity(intent)
                                 finish()
