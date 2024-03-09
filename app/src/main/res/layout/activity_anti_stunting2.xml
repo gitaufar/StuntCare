@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,6 +7,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.stuntcare.AntiStunting2">
+
+<!--    <FrameLayout-->
+<!--        android:id="@+id/navhost"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:defaultBovHost="true">-->
+
+<!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--            android:id="@+id/bottom_navigation"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:background="@color/white"-->
+<!--            app:menu="@menu/bottom_menu" />-->
+
+<!--    </FrameLayout>-->
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="732dp"-->
+<!--        android:src="@drawable/artboard1_copy3"-->
+<!--        app:fabAlignmentMode="center"-->
+<!--        app:fabSize="normal"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <ImageView
         android:id="@+id/imageView5"
@@ -91,7 +121,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button4"
         android:layout_width="318dp"
-        android:layout_height="46dp"
+        android:layout_height="48dp"
         android:layout_marginTop="244dp"
         android:background="@drawable/border2"
         android:fontFamily="@font/poppins_semibold"
@@ -103,11 +133,4 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        app:layout_constraintBottom_toBottomOf="parent" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_home"
+        android:title="Home"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/bottom_stream"
+        android:title="Stream"
+        android:icon="@drawable/ic_stream"/>
+
+    <item
+        android:id="@+id/bottom_procare"
+        android:title="ProCare"
+        android:icon="@drawable/ic_procare"/>
+
+    <item
+        android:id="@+id/bottom_profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_profile"/>
+
+</menu>

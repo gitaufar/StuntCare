@@ -27,4 +27,11 @@
     <string name="anti">anti stunting</string>
     <string name="inputYourData">Input your data and let the apps recomend your daily pregnancy needs.</string>
     <string name="inputData">Input Data</string>
+    <string name="dailyUpdates">Daily Updates</string>
+    <string name="weight">Weight</string>
+    <string name="beforePregnat">Before Pregnat</string>
+    <string name="now">Now</string>
+    <string name="kilogram">Kilogram</string>
+    <string name="historyOfIllness">History of illness</string>
+    <string name="next">Next</string>
 </resources>
