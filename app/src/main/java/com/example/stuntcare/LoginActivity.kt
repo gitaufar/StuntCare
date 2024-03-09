@@ -51,6 +51,14 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
+//        val loginButton = findViewById<Button>(R.id.login)
+//        loginButton.setOnClickListener {
+//            // Membuat Intent untuk berpindah ke halaman AntiStunting2
+//            val intent = Intent(this, AntiStunting2::class.java)
+//            // Memulai aktivitas baru dengan Intent
+//            startActivity(intent)
+//        }
+
         btnGoogle.setOnClickListener(){
             signInWithGoogle()
         }
