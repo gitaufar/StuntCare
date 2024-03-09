@@ -6,19 +6,23 @@ package com.example.raon
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+import com.example.stuntcare.AntiStunting2
 import com.example.stuntcare.PersonalData1
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.database.database
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
@@ -28,6 +32,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_loginn)
         val auth = FirebaseAuth.getInstance()
+        val database = Firebase.database
         val btnLogin: AppCompatButton = findViewById(R.id.login)
         val etPass : EditText = findViewById(R.id.etPasswordLogin)
         val etEmail: EditText = findViewById(R.id.etEmailLogin)
@@ -57,10 +62,24 @@ class LoginActivity : AppCompatActivity() {
             if(email.isNotEmpty() && pass.isNotEmpty()){
                 auth.signInWithEmailAndPassword(email,pass).addOnCompleteListener(OnCompleteListener{
                     if(it.isSuccessful){
-                        val intent = Intent(this, PersonalData1::class.java)
-                        Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
-                        startActivity(intent)
-                        finish()
+                        val currentUser = firebaseAuth.currentUser
+                        val ref = database.getReference(currentUser?.uid!!)
+                        ref.child("nama").get().addOnSuccessListener {
+                            if(ref.child("nama").get().equals("")) {
+                                val intent = Intent(this, AntiStunting2::class.java)
+                                Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
+                                startActivity(intent)
+                                finish()
+                            } else {
+                                val intent = Intent(this, PersonalData1::class.java)
+                                Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
+                                startActivity(intent)
+                                finish()
+                            }
+                        }.addOnFailureListener{
+                            Log.e("firebase", "Error getting data", it)
+                        }
+
                     } else {
                         Toast.makeText(this, "wrong email or password", Toast.LENGTH_SHORT).show()
                     }
