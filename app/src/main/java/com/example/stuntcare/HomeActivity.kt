@@ -18,6 +18,14 @@ class HomeActivity : AppCompatActivity() {
 
 //        val database = Firebase.database
 //        val myRef = database.getReference("message")
+//        val ref = database.getReference("coba")
+//
+//        val user = object{
+//            val data = 1
+//            val alamat = "bogor"
+//        }
+//
+//        ref.child("coba").setValue(user)
 //
 //        myRef.setValue("Hello, World!")
 //
@@ -26,15 +34,15 @@ class HomeActivity : AppCompatActivity() {
 //        val currentUser = firebaseAuth.currentUser
 //        currentUser?.displayName
 //
-//        val newReference = database.getReference("orang")
+//        val newReference = database.getReference(currentUser?.uid!!)
 //
 //        val orang = object{
-//            val uid = currentUser?.uid
+//            val nama = "aufar"
 //            val umur = 17
 //        }
 //
-//        newReference.child(orang.uid!!).setValue(orang.umur)
-
+//        newReference.setValue(orang)
+////        newReference.child("users").get().addOnSuccessListener
 
 
         btnLogout.setOnClickListener(){

@@ -112,5 +112,17 @@
         android:fontFamily="@font/poppins_semibold"
         android:textSize="12sp" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_confirm"
+        android:layout_width="297dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="48dp"
+        android:text="Confirm"
+        android:textColor="@color/white"
+        android:background="@drawable/border2"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppins_bold"/>
+
     </LinearLayout>
 </LinearLayout>
