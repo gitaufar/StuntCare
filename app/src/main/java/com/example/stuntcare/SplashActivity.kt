@@ -6,6 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.example.raon.HomeActivity
 import com.example.raon.MainActivity
 import com.example.raon.R
 import com.google.firebase.Firebase
@@ -25,13 +26,13 @@ class SplashActivity : AppCompatActivity() {
                 if (firebaseAuth.currentUser != null) {
                     val currentUser = firebaseAuth.currentUser
                     val ref = database.getReference(currentUser?.uid!!)
-                    ref.child("data").get().addOnSuccessListener {
-                        if(ref.child("data").child("nama").get().equals("")) {
-                            val intent = Intent(this, PersonalData1::class.java)
+                    ref.child("nama").get().addOnSuccessListener {
+                        if(it.exists()) {
+                            val intent = Intent(this, HomeActivity::class.java)
                             startActivity(intent)
                             finish()
                         } else {
-                            val intent = Intent(this, AntiStunting2::class.java)
+                            val intent = Intent(this, PersonalData1::class.java)
                             startActivity(intent)
                             finish()
                         }

@@ -2,9 +2,13 @@ package com.example.raon
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.database
 
 class HomeActivity : AppCompatActivity() {
 
@@ -13,12 +17,23 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        val auth = FirebaseAuth.getInstance()
-        val btnLogout: Button = findViewById(R.id.logout)
+        val database = Firebase.database
 
-//        val database = Firebase.database
-//        val myRef = database.getReference("message")
-//        val ref = database.getReference("coba")
+
+
+        val auth = FirebaseAuth.getInstance()
+        val currentUser = auth.currentUser
+        val ref = database.getReference(currentUser?.uid!!)
+        val btnLogout: Button = findViewById(R.id.logout)
+        val text: TextView = findViewById(R.id.text)
+        ref.child("nama").get().addOnSuccessListener {
+            text.text = "Good Morning ${it.value}"
+        }.addOnFailureListener{
+            Log.e("firebase", "Error getting data", it)
+        }
+
+
+
 //
 //        val user = object{
 //            val data = 1
@@ -31,7 +46,6 @@ class HomeActivity : AppCompatActivity() {
 //
 //        val firebaseAuth = FirebaseAuth.getInstance()
 //
-//        val currentUser = firebaseAuth.currentUser
 //        currentUser?.displayName
 //
 //        val newReference = database.getReference(currentUser?.uid!!)
