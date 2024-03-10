@@ -63,8 +63,6 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
 
-
-
 }
 
 

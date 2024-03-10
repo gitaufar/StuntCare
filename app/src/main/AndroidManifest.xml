@@ -14,8 +14,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Raon"
         tools:targetApi="31">
+
+        <activity
+            android:name="com.example.stuntcare.AntiStunting2_1"
+            android:exported="false">
+<!--            <action android:name="android.intent.action.MAIN" />-->
+
+<!--            <category android:name="android.intent.category.LAUNCHER" />-->
+        </activity>
+        <activity
+            android:name="com.example.stuntcare.AntiStunting2_3"
+            android:exported="false" />
+        <activity
+            android:name="com.example.stuntcare.AntiStunting2_4"
+            android:exported="false" />
         <activity
             android:name="com.example.stuntcare.NutritionOutputActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.stuntcare.AntiStunting2_5"
             android:exported="false" />
         <activity
             android:name="com.example.stuntcare.FoodOutputActivity"

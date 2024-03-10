@@ -1,11 +1,10 @@
 package com.example.stuntcare
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.widget.AppCompatButton
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatButton
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.raon.R
@@ -22,7 +21,7 @@ class AntiStunting2 : AppCompatActivity() {
         }
         val btnInput: AppCompatButton = findViewById(R.id.button4)
         btnInput.setOnClickListener(){
-            Intent(this,AntiStunting4::class.java).also{
+            Intent(this,AntiStunting2_1::class.java).also{
                 startActivity(it)
             }
         }
