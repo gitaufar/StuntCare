@@ -58,6 +58,162 @@
             android:layout_marginTop="240dp"
             android:textColor="@color/text_color_register"
             android:fontFamily="@font/poppins_semibold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Embrace:"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/text_color_register"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="14sp"
+            android:layout_marginTop="300dp"/>
+
+
+        <TextView
+            android:id="@+id/embrace1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_marginStart="27dp"
+            android:textColor="@color/text_color_register"
+            android:fontFamily="@font/poppins_rg"
+            android:textSize="12sp"
+            android:layout_marginTop="330dp"/>
+
+        <TextView
+            android:id="@+id/embrace2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_marginStart="27dp"
+            android:textColor="@color/text_color_register"
+            android:fontFamily="@font/poppins_rg"
+            android:textSize="12sp"
+            android:layout_marginTop="360dp"/>
+
+        <TextView
+            android:id="@+id/embrace3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_marginStart="27dp"
+            android:textColor="@color/text_color_register"
+            android:fontFamily="@font/poppins_rg"
+            android:textSize="12sp"
+            android:layout_marginTop="390dp"/>
+
+        <TextView
+            android:id="@+id/embrace4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_marginStart="27dp"
+            android:textColor="@color/text_color_register"
+            android:fontFamily="@font/poppins_rg"
+            android:textSize="12sp"
+            android:layout_marginTop="420dp"/>
+
+        <TextView
+            android:id="@+id/embrace5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_marginStart="27dp"
+            android:textColor="@color/text_color_register"
+            android:fontFamily="@font/poppins_rg"
+            android:textSize="12sp"
+            android:layout_marginTop="450dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avoid:"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/text_color_register"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="14sp"
+            android:layout_marginTop="490dp"/>
+
+        <TextView
+            android:id="@+id/avoid1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_marginStart="27dp"
+            android:textColor="@color/text_color_register"
+            android:fontFamily="@font/poppins_rg"
+            android:textSize="12sp"
+            android:layout_marginTop="520dp"/>
+
+        <TextView
+            android:id="@+id/avoid2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_marginStart="27dp"
+            android:textColor="@color/text_color_register"
+            android:fontFamily="@font/poppins_rg"
+            android:textSize="12sp"
+            android:layout_marginTop="550dp"/>
+
+        <TextView
+            android:id="@+id/avoid3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_marginStart="27dp"
+            android:textColor="@color/text_color_register"
+            android:fontFamily="@font/poppins_rg"
+            android:textSize="12sp"
+            android:layout_marginTop="580dp"/>\
+
+        <TextView
+            android:id="@+id/avoid4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_marginStart="27dp"
+            android:textColor="@color/text_color_register"
+            android:fontFamily="@font/poppins_rg"
+            android:textSize="12sp"
+            android:layout_marginTop="610dp"/>
+
+        <TextView
+            android:id="@+id/avoid5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_marginStart="27dp"
+            android:textColor="@color/text_color_register"
+            android:fontFamily="@font/poppins_rg"
+            android:textSize="12sp"
+            android:layout_marginTop="640dp"/>
+
+        <TextView
+            android:id="@+id/avoid6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_marginStart="27dp"
+            android:textColor="@color/text_color_register"
+            android:fontFamily="@font/poppins_rg"
+            android:textSize="12sp"
+            android:layout_marginTop="670dp"/>
+
+        <TextView
+            android:id="@+id/avoid7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_marginStart="27dp"
+            android:textColor="@color/text_color_register"
+            android:fontFamily="@font/poppins_rg"
+            android:textSize="12sp"
+            android:layout_marginTop="700dp"/>
+
+
+
     </FrameLayout>
 
 </LinearLayout>
