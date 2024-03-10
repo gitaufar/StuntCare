@@ -6,6 +6,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+import com.example.raon.HomeActivity
 import com.example.raon.R
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
@@ -28,7 +29,7 @@ class PersonalData1 : AppCompatActivity() {
                     var nama = etNama.text.toString()
                 }
                 ref.setValue(data)
-                Intent(this,AntiStunting2::class.java).also{
+                Intent(this, HomeActivity::class.java).also{
                     startActivity(it)
                 }
             } else {

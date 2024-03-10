@@ -15,17 +15,22 @@
         android:theme="@style/Theme.Raon"
         tools:targetApi="31">
         <activity
+            android:name="com.example.stuntcare.NutritionOutputActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.stuntcare.FoodOutputActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.stuntcare.AntiStunting4"
             android:exported="false" />
         <activity
             android:name="com.example.stuntcare.SplashActivity"
             android:exported="true">
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
@@ -61,7 +66,6 @@
         <activity
             android:name="com.example.stuntcare.AntiStunting2"
             android:exported="false" />
-
     </application>
 
 </manifest>
