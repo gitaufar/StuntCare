@@ -34,4 +34,12 @@
     <string name="kilogram">Kilogram</string>
     <string name="historyOfIllness">History of illness</string>
     <string name="next">Next</string>
+    <string name="lastMenstrualPeriod">Last Menstrual Period</string>
+    <string name="pleaseInput">Please input the first day of your last menstrual period to find out the estimated due date of your baby.</string>
+    <string name="date">Date</string>
+    <string name="prePregnancyWeight">Pre-pregnancy weight</string>
+    <string name="inputyourprepregnancy">Please input your pre-pregnancy weight to help us provide a more accurate health and nutrition plan during your pregnancy journey.</string>
+    <string name="postPregnancy">Post-pregnancy weight</string>
+    <string name="inputpostpregnancy">Please input your post-pregnancy weight to help us provide a more accurate health and nutrition plan during your post-pregnancy journey.</string>
+    <string name="inputIllnes">Please select or input your history of illness to help us provide a more accurate health and nutrition plan during your healthcare journey.</string>
 </resources>
