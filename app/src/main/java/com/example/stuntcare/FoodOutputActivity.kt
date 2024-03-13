@@ -1,6 +1,8 @@
 package com.example.stuntcare
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.raon.R
 import com.google.firebase.Firebase
@@ -16,5 +18,13 @@ class FoodOutputActivity : AppCompatActivity() {
         val database = Firebase.database
         val currentUser = auth.currentUser
         val ref = database.getReference(currentUser?.uid!!)
+
+        val exit: ImageView = findViewById(R.id.exit)
+
+        exit.setOnClickListener() {
+            Intent(this, AntiStunting4::class.java).also {
+                startActivity(it)
+            }
+        }
     }
 }

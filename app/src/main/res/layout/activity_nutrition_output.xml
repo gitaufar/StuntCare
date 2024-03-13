@@ -4,25 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/splash_bg"
+    android:orientation="vertical"
     tools:context="com.example.stuntcare.NutritionOutputActivity">
 
     <TextView
-        android:layout_marginTop="35dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/poppins_bold"
         android:text="Anti Stunting"
         android:textColor="@color/text_color_register"
-        android:textSize="30sp"
-        android:fontFamily="@font/poppins_bold"/>
+        android:textSize="30sp" />
 
     <FrameLayout
         android:layout_width="345dp"
-        android:layout_marginTop="20dp"
         android:layout_height="600dp"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:background="@drawable/pemisah">
 
         <TextView
@@ -36,116 +36,117 @@
             android:textSize="20sp" />
 
         <ImageView
+            android:id="@+id/exit"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="40dp"
-            android:src="@drawable/close_24px"/>
+            android:src="@drawable/close_24px" />
 
         <ImageView
             android:layout_width="208dp"
             android:layout_height="140dp"
-            android:src="@drawable/nutrition"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="88dp"
-            android:layout_gravity="center_horizontal"/>
+            android:src="@drawable/nutrition" />
+
         <TextView
             android:layout_width="277dp"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:text="Recommendations based on your ilness history"
-            android:textSize="16sp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="240dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Recommendations based on your ilness history"
+            android:textAlignment="center"
             android:textColor="@color/text_color_register"
-            android:fontFamily="@font/poppins_semibold"/>
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Embrace:"
             android:layout_marginStart="20dp"
-            android:textColor="@color/text_color_register"
+            android:layout_marginTop="300dp"
             android:fontFamily="@font/poppins_semibold"
-            android:textSize="14sp"
-            android:layout_marginTop="300dp"/>
+            android:text="Embrace:"
+            android:textColor="@color/text_color_register"
+            android:textSize="14sp" />
 
 
         <TextView
             android:id="@+id/embrace1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="-"
             android:layout_marginStart="27dp"
-            android:textColor="@color/text_color_register"
+            android:layout_marginTop="330dp"
             android:fontFamily="@font/poppins_rg"
-            android:textSize="12sp"
-            android:layout_marginTop="330dp"/>
+            android:text="-"
+            android:textColor="@color/text_color_register"
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/embrace2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="-"
             android:layout_marginStart="27dp"
-            android:textColor="@color/text_color_register"
+            android:layout_marginTop="360dp"
             android:fontFamily="@font/poppins_rg"
-            android:textSize="12sp"
-            android:layout_marginTop="360dp"/>
+            android:text="-"
+            android:textColor="@color/text_color_register"
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/embrace3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="-"
             android:layout_marginStart="27dp"
-            android:textColor="@color/text_color_register"
+            android:layout_marginTop="390dp"
             android:fontFamily="@font/poppins_rg"
-            android:textSize="12sp"
-            android:layout_marginTop="390dp"/>
+            android:text="-"
+            android:textColor="@color/text_color_register"
+            android:textSize="12sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Avoid:"
             android:layout_marginStart="20dp"
-            android:textColor="@color/text_color_register"
+            android:layout_marginTop="430dp"
             android:fontFamily="@font/poppins_semibold"
-            android:textSize="14sp"
-            android:layout_marginTop="430dp"/>
+            android:text="Avoid:"
+            android:textColor="@color/text_color_register"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/avoid1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="-"
             android:layout_marginStart="27dp"
-            android:textColor="@color/text_color_register"
+            android:layout_marginTop="460dp"
             android:fontFamily="@font/poppins_rg"
-            android:textSize="12sp"
-            android:layout_marginTop="460dp"/>
+            android:text="-"
+            android:textColor="@color/text_color_register"
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/avoid2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="-"
             android:layout_marginStart="27dp"
-            android:textColor="@color/text_color_register"
+            android:layout_marginTop="490dp"
             android:fontFamily="@font/poppins_rg"
-            android:textSize="12sp"
-            android:layout_marginTop="490dp"/>
+            android:text="-"
+            android:textColor="@color/text_color_register"
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/avoid3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="-"
             android:layout_marginStart="27dp"
-            android:textColor="@color/text_color_register"
+            android:layout_marginTop="520dp"
             android:fontFamily="@font/poppins_rg"
-            android:textSize="12sp"
-            android:layout_marginTop="520dp"/>
-
+            android:text="-"
+            android:textColor="@color/text_color_register"
+            android:textSize="12sp" />
 
 
     </FrameLayout>
