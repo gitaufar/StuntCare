@@ -9,6 +9,9 @@ import android.widget.EditText
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.raon.R
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.database
 
 class AntiStunting2_1 : AppCompatActivity() {
 
@@ -24,6 +27,10 @@ class AntiStunting2_1 : AppCompatActivity() {
         editTextDate = findViewById(R.id.editTextText5)
         imageViewCalendar = findViewById(R.id.imageView8)
         calendarView = findViewById(R.id.calendarView2)
+        val auth = FirebaseAuth.getInstance()
+        val currentUser = auth.currentUser
+        val db = Firebase.database
+        val ref = db.getReference(currentUser?.uid!!)
 
         // Sembunyikan calendarView saat awalnya
         calendarView.visibility = View.GONE
@@ -48,6 +55,8 @@ class AntiStunting2_1 : AppCompatActivity() {
         buttonNext = findViewById(R.id.button5)
 
         buttonNext.setOnClickListener {
+            val lastPeriod = editTextDate.text.toString()
+            ref.child("lastPeriod").setValue(lastPeriod)
             navigateToNextPage()
         }
     }

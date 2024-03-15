@@ -78,7 +78,7 @@
             android:text="-"
             android:layout_marginStart="27dp"
             android:textColor="@color/text_color_register"
-            android:fontFamily="@font/poppins_rg"
+            android:fontFamily="@font/poppins_medium"
             android:textSize="12sp"
             android:layout_marginTop="330dp"/>
 
@@ -89,7 +89,7 @@
             android:text="-"
             android:layout_marginStart="27dp"
             android:textColor="@color/text_color_register"
-            android:fontFamily="@font/poppins_rg"
+            android:fontFamily="@font/poppins_medium"
             android:textSize="12sp"
             android:layout_marginTop="360dp"/>
 
@@ -100,7 +100,7 @@
             android:text="-"
             android:layout_marginStart="27dp"
             android:textColor="@color/text_color_register"
-            android:fontFamily="@font/poppins_rg"
+            android:fontFamily="@font/poppins_medium"
             android:textSize="12sp"
             android:layout_marginTop="390dp"/>
 
@@ -111,7 +111,7 @@
             android:text="-"
             android:layout_marginStart="27dp"
             android:textColor="@color/text_color_register"
-            android:fontFamily="@font/poppins_rg"
+            android:fontFamily="@font/poppins_medium"
             android:textSize="12sp"
             android:layout_marginTop="420dp"/>
 
@@ -122,7 +122,7 @@
             android:text="-"
             android:layout_marginStart="27dp"
             android:textColor="@color/text_color_register"
-            android:fontFamily="@font/poppins_rg"
+            android:fontFamily="@font/poppins_medium"
             android:textSize="12sp"
             android:layout_marginTop="450dp"/>
 
@@ -143,7 +143,7 @@
             android:text="-"
             android:layout_marginStart="27dp"
             android:textColor="@color/text_color_register"
-            android:fontFamily="@font/poppins_rg"
+            android:fontFamily="@font/poppins_medium"
             android:textSize="12sp"
             android:layout_marginTop="520dp"/>
 
@@ -154,7 +154,7 @@
             android:text="-"
             android:layout_marginStart="27dp"
             android:textColor="@color/text_color_register"
-            android:fontFamily="@font/poppins_rg"
+            android:fontFamily="@font/poppins_medium"
             android:textSize="12sp"
             android:layout_marginTop="550dp"/>
 
@@ -165,7 +165,7 @@
             android:text="-"
             android:layout_marginStart="27dp"
             android:textColor="@color/text_color_register"
-            android:fontFamily="@font/poppins_rg"
+            android:fontFamily="@font/poppins_medium"
             android:textSize="12sp"
             android:layout_marginTop="580dp"/>\
 
@@ -176,7 +176,7 @@
             android:text="-"
             android:layout_marginStart="27dp"
             android:textColor="@color/text_color_register"
-            android:fontFamily="@font/poppins_rg"
+            android:fontFamily="@font/poppins_medium"
             android:textSize="12sp"
             android:layout_marginTop="610dp"/>
 
@@ -187,7 +187,7 @@
             android:text="-"
             android:layout_marginStart="27dp"
             android:textColor="@color/text_color_register"
-            android:fontFamily="@font/poppins_rg"
+            android:fontFamily="@font/poppins_medium"
             android:textSize="12sp"
             android:layout_marginTop="640dp"/>
 
@@ -198,7 +198,7 @@
             android:text="-"
             android:layout_marginStart="27dp"
             android:textColor="@color/text_color_register"
-            android:fontFamily="@font/poppins_rg"
+            android:fontFamily="@font/poppins_medium"
             android:textSize="12sp"
             android:layout_marginTop="670dp"/>
 
@@ -209,7 +209,7 @@
             android:text="-"
             android:layout_marginStart="27dp"
             android:textColor="@color/text_color_register"
-            android:fontFamily="@font/poppins_rg"
+            android:fontFamily="@font/poppins_medium"
             android:textSize="12sp"
             android:layout_marginTop="700dp"/>
 

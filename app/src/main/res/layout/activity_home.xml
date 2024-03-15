@@ -61,7 +61,11 @@
                 android:layout_marginEnd="16dp"
                 android:background="@android:color/transparent"
                 app:labelVisibilityMode="labeled"
-                app:menu="@menu/bottom_menu" />
+                app:menu="@menu/bottom_menu"
+                app:itemIconTint="@drawable/item_selector"
+                app:itemRippleColor="@android:color/transparent"
+                app:itemTextColor="@drawable/item_selector"
+                app:itemIconSize="37dp"/>
         </com.google.android.material.bottomappbar.BottomAppBar>
 
 
@@ -70,6 +74,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/fab"
             android:src="@drawable/ic_botnav"
+            app:fabCustomSize="70dp"
             app:maxImageSize="35dp"
             android:backgroundTint="@color/text_color_register"
             app:layout_anchor="@id/bottomAppBar"/>

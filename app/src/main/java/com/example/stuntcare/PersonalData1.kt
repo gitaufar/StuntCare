@@ -9,7 +9,6 @@ import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
-import com.example.raon.HomeActivity
 import com.example.raon.R
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
@@ -53,7 +52,7 @@ class PersonalData1 : AppCompatActivity() {
                     var birthday = editTextDate.text.toString()
                 }
                 ref.setValue(data)
-                Intent(this, HomeActivity::class.java).also{
+                Intent(this, AntiStunting2::class.java).also{
                     startActivity(it)
                 }
             } else {

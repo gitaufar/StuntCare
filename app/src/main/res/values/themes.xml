@@ -16,5 +16,9 @@
     <style name="FabShapeStyle" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerSize">50%</item>
     </style>
+    
+    <style name="SlideActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in</item>
+    </style>
 
 </resources>

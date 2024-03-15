@@ -29,7 +29,7 @@ class AntiStunting2_5 : AppCompatActivity() {
 
             val historyOfIllness = findViewById<EditText>(R.id.editTextText10).text.toString()
             // Start AntiStunting2 activity
-            val intent = Intent(this, AntiStunting4::class.java)
+            val intent = Intent(this, AntiStunting2::class.java)
             intent.putExtra("historyOfIllness", historyOfIllness)
             startActivity(intent)
         }
