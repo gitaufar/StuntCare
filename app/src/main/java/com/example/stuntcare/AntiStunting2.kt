@@ -53,5 +53,6 @@ class AntiStunting2 : AppCompatActivity() {
                 startActivity(it)
             }
         }
+
     }
 }
