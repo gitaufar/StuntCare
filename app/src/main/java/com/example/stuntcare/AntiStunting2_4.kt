@@ -40,6 +40,7 @@ class AntiStunting2_4 : AppCompatActivity() {
 
         val imageViewBack = findViewById<ImageView>(R.id.imageView17)
         imageViewBack.setOnClickListener {
+            onBackPressed()
 
         }
     }

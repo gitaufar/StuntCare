@@ -5,10 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.stuntcare.AntiStunting2_5">
+    tools:context="com.example.stuntcare.AntiStunting2_6">
 
     <ProgressBar
-        android:id="@+id/progressBar13"
+        android:id="@+id/progressBar17"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="84dp"
         android:layout_height="6dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
-        android:id="@+id/progressBar14"
+        android:id="@+id/progressBar18"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="84dp"
         android:layout_height="6dp"
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
-        android:id="@+id/progressBar15"
+        android:id="@+id/progressBar19"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="84dp"
         android:layout_height="6dp"
@@ -44,17 +44,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
-        android:id="@+id/progressBar16"
+        android:id="@+id/progressBar20"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="84dp"
         android:layout_height="6dp"
         android:layout_marginStart="292dp"
         android:layout_marginTop="75dp"
+        android:background="@color/text_color_register"
+        android:progressTint="@color/text_color_register"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView17"
+        android:id="@+id/imageView18"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginStart="16dp"
@@ -64,25 +66,25 @@
         app:srcCompat="@drawable/ic_arrowback" />
 
     <TextView
-        android:id="@+id/textView29"
-        android:layout_width="130dp"
+        android:id="@+id/textView31"
+        android:layout_width="48dp"
         android:layout_height="20dp"
         android:layout_marginStart="48dp"
         android:layout_marginTop="99dp"
         android:fontFamily="@font/poppins_bold"
-        android:text="@string/historyOfIllness"
+        android:text="Alergy"
         android:textColor="@color/text_color_register"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView30"
+        android:id="@+id/textView32"
         android:layout_width="342dp"
         android:layout_height="60dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="153dp"
-        android:text="@string/inputIllnes"
+        android:text="Please select or input your history of alergy help us provide a more accurate health and nutrition plan during your healthcare journey."
         android:textColor="@color/text_color_register"
         android:textSize="14sp"
         android:fontFamily="@font/poppins_rg"
@@ -90,14 +92,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnListIllness"
+        android:id="@+id/btnAlergy"
         android:layout_width="345dp"
         android:layout_height="48dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="245dp"
         android:background="@color/white"
         android:backgroundTint="@color/white"
-        android:text="List of Illness"
+        android:text="List of Alergy"
         app:iconTint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -131,7 +133,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText10"
+        android:id="@+id/editTextText11"
         android:layout_width="345dp"
         android:layout_height="46dp"
         android:layout_marginStart="24dp"
@@ -139,7 +141,7 @@
         android:background="@drawable/datebutton"
         android:ems="10"
         android:fontFamily="@font/poppins_rg"
-        android:hint="Or input your History of illness here"
+        android:hint="Or input your other alergy here"
         android:inputType="textLongMessage"
         android:paddingStart="24dp"
         android:paddingTop="4dp"

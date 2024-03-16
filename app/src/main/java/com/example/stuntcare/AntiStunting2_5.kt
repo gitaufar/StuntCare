@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -23,12 +24,12 @@ class AntiStunting2_5 : AppCompatActivity() {
         val ref = db.getReference(currentUser?.uid!!)
 
         val editTextIllness = findViewById<EditText>(R.id.editTextText10)
-        val nextButton = findViewById<Button>(R.id.button11)
+        val nextButton = findViewById<Button>(R.id.buttonNext)
 
         nextButton.setOnClickListener {
             val illness = editTextIllness.text.toString()
 
-            val intent = Intent(this, AntiStunting2_4::class.java)
+            val intent = Intent(this, AntiStunting2_6::class.java)
             intent.putExtra("illness", illness)
             startActivity(intent)
         }
@@ -43,20 +44,30 @@ class AntiStunting2_5 : AppCompatActivity() {
         val illnesses = arrayOf("Anemia", "Asma", "Diabetes", "Kanker")
         val checkedItems = booleanArrayOf(false, false, false, false)
 
-        val buttonNext = findViewById<Button>(R.id.button11)
+        val buttonNext = findViewById<Button>(R.id.buttonNext)
         buttonNext.setOnClickListener {
-
             val historyOfIllness = findViewById<EditText>(R.id.editTextText10).text.toString()
-            // Start AntiStunting2 activity
-            val intent = Intent(this, MainActivity2::class.java)
+
+            val intent = Intent(this, AntiStunting2_6::class.java)
             intent.putExtra("historyOfIllness", historyOfIllness)
             startActivity(intent)
+        }
+
+        val buttonSkip = findViewById<Button>(R.id.buttonSkip)
+        buttonSkip.setOnClickListener {
+            val intent = Intent(this, AntiStunting2_6::class.java)
+            startActivity(intent)
+        }
+
+        val imageViewBack = findViewById<ImageView>(R.id.imageView17)
+        imageViewBack.setOnClickListener {
+            onBackPressed()
         }
 
         val builder = AlertDialog.Builder(this)
         builder.setTitle("List of Illness")
         builder.setMultiChoiceItems(illnesses, checkedItems) { dialog, which, isChecked ->
-            // Do something when a checkbox is clicked
+
         }
         builder.setPositiveButton("OK") { dialog, which ->
             val selectedIllnesses = StringBuilder()
@@ -75,6 +86,48 @@ class AntiStunting2_5 : AppCompatActivity() {
         val dialog = builder.create()
         dialog.show()
     }
+
+//    private fun showIllnessAlertDialog() {
+//        val illnesses = arrayOf("Anemia", "Asma", "Diabetes", "Kanker")
+//        val checkedItems = booleanArrayOf(false, false, false, false)
+//
+//        val buttonNext = findViewById<Button>(R.id.buttonNext)
+//        buttonNext.setOnClickListener {
+//
+//            val historyOfIllness = findViewById<EditText>(R.id.editTextText10).text.toString()
+//
+//            val intent = Intent(this, AntiStunting2_6::class.java)
+//            intent.putExtra("historyOfIllness", historyOfIllness)
+//            startActivity(intent)
+//        }
+//
+//        val imageViewBack = findViewById<ImageView>(R.id.imageView17)
+//        imageViewBack.setOnClickListener {
+//
+//        }
+//
+//        val builder = AlertDialog.Builder(this)
+//        builder.setTitle("List of Illness")
+//        builder.setMultiChoiceItems(illnesses, checkedItems) { dialog, which, isChecked ->
+//
+//        }
+//        builder.setPositiveButton("OK") { dialog, which ->
+//            val selectedIllnesses = StringBuilder()
+//            for (i in checkedItems.indices) {
+//                if (checkedItems[i]) {
+//                    selectedIllnesses.append(illnesses[i]).append("\n")
+//                }
+//            }
+//            selectedIllnesses.toString().let {
+//                showToast("Selected Illnesses:\n$it")
+//            }
+//        }
+//        builder.setNegativeButton("Cancel") { dialog, which ->
+//            dialog.dismiss()
+//        }
+//        val dialog = builder.create()
+//        dialog.show()
+//    }
 
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()

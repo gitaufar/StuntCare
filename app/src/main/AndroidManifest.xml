@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Raon"
         tools:targetApi="31">
         <activity
+            android:name="com.example.stuntcare.AntiStunting2_6"
+            android:exported="false" />
+        <activity
             android:name="com.example.stuntcare.MainActivity2"
             android:exported="false" />
         <activity
@@ -25,7 +28,7 @@
             android:exported="false" />
         <activity
             android:name="com.example.stuntcare.AntiStunting2_1"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name="com.example.stuntcare.AntiStunting2_3"
             android:exported="false" />
