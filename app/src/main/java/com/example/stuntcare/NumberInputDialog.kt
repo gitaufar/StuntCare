@@ -16,8 +16,6 @@ class NumberInputDialog : DialogFragment() {
     ): View? {
         val view = inflater.inflate(R.layout.activity_number_input_dialog, container, false)
 
-        // Atur listener untuk tombol-tombol angka
-
         return view
     }
 }

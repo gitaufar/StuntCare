@@ -8,11 +8,19 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.raon.R
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.database
 
 class AntiStunting2_5 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_anti_stunting25)
+
+        val auth = FirebaseAuth.getInstance()
+        val currentUser = auth.currentUser
+        val db = Firebase.database
+        val ref = db.getReference(currentUser?.uid!!)
 
         val editTextIllness = findViewById<EditText>(R.id.editTextText10)
         val nextButton = findViewById<Button>(R.id.button11)
@@ -57,8 +65,6 @@ class AntiStunting2_5 : AppCompatActivity() {
                     selectedIllnesses.append(illnesses[i]).append("\n")
                 }
             }
-            // Do something with the selected illnesses
-            // For example, display them in a toast message
             selectedIllnesses.toString().let {
                 showToast("Selected Illnesses:\n$it")
             }
