@@ -15,10 +15,14 @@ class AntiStunting2_3 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_anti_stunting23)
 
-        val buttonNext = findViewById<Button>(R.id.button6)
-        buttonNext.setOnClickListener {
-            // Start AntiStunting2_4 activity
+        val editTextWeight = findViewById<EditText>(R.id.editTextWeight)
+        val nextButton = findViewById<Button>(R.id.button6)
+
+        nextButton.setOnClickListener {
+            val weight = editTextWeight.text.toString()
+
             val intent = Intent(this, AntiStunting2_4::class.java)
+            intent.putExtra("weight", weight)
             startActivity(intent)
         }
     }

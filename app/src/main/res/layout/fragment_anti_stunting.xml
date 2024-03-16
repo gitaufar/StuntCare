@@ -6,7 +6,7 @@
     tools:context="AntiStuntingFragment">
 
         <FrameLayout
-            android:visibility="gone"
+            android:visibility="visible"
             android:id="@+id/flEmpty"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -14,7 +14,8 @@
             <FrameLayout
                 android:layout_width="301dp"
                 android:layout_height="353dp"
-                android:layout_gravity="center">
+                android:layout_marginTop="219dp"
+                android:layout_gravity="center_horizontal">
 
                 <ImageView
                     android:layout_width="108dp"
@@ -87,6 +88,7 @@
         </FrameLayout>
 
         <FrameLayout
+            android:visibility="gone"
             android:id="@+id/flExist"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
