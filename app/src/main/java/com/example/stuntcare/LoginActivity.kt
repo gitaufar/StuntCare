@@ -12,6 +12,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+import com.example.stuntcare.MainActivity2
 import com.example.stuntcare.PersonalData1
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -73,7 +74,7 @@ class LoginActivity : AppCompatActivity() {
                         val ref = database.getReference(currentUser?.uid!!)
                         ref.child("nama").get().addOnSuccessListener {
                             if(it.exists()) {
-                                val intent = Intent(this, HomeActivity::class.java)
+                                val intent = Intent(this, MainActivity2::class.java)
                                 Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
                                 startActivity(intent)
                                 finish()
@@ -125,7 +126,7 @@ class LoginActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     val user = firebaseAuth.currentUser
                     //TODO: Handle successful sign-in
-                    Intent(this,HomeActivity::class.java).also{
+                    Intent(this,MainActivity2::class.java).also{
                         startActivity(it)
                     }
                 } else {

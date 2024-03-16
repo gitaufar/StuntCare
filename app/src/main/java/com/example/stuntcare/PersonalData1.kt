@@ -52,7 +52,7 @@ class PersonalData1 : AppCompatActivity() {
                     var birthday = editTextDate.text.toString()
                 }
                 ref.setValue(data)
-                Intent(this, AntiStunting2::class.java).also{
+                Intent(this, MainActivity2::class.java).also{
                     startActivity(it)
                 }
             } else {

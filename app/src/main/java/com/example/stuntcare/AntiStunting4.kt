@@ -2,7 +2,6 @@ package com.example.stuntcare
 
 import android.os.Bundle
 import android.widget.EditText
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -15,7 +14,6 @@ class AntiStunting4 : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_anti_stunting4)
         val database = Firebase.database
         val auth = FirebaseAuth.getInstance()
