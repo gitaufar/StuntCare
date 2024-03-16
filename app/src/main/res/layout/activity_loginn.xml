@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_marginStart="48dp"
+    android:orientation="vertical"
     tools:context=".LoginActivity">
+
     <ImageView
         android:layout_width="108dp"
         android:layout_height="133dp"
@@ -18,99 +19,98 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:textSize="20sp"
         android:fontFamily="@font/poppins_bold"
-        android:textStyle="bold"
-        android:textColor="@color/text_color_register"/>
+        android:text="Login"
+        android:textColor="@color/text_color_register"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="20dp"
         android:fontFamily="@font/poppins_rg"
         android:text="please enter your email and password"
-        android:textSize="14sp"
-        android:textColor="@color/text_color_register"/>
+        android:textColor="@color/text_color_register"
+        android:textSize="14sp" />
 
     <TextView
-        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_semibold"
         android:text="Email"
-        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/text_color_register"
         android:textSize="16sp"
-        android:textStyle=""
-        android:textColor="@color/text_color_register"/>
+        android:textStyle="" />
 
-        <EditText
-            android:id="@+id/etEmailLogin"
-            android:layout_width="297dp"
-            android:layout_height="48dp"
-            android:hint="input your email"
-            android:textSize="16sp"
-            android:paddingLeft="24dp"
-            android:inputType="textEmailAddress"
-            android:textColor="@color/text_color_register"
-            android:fontFamily="@font/poppins_rg"
-            android:background="@drawable/border"/>
-
-
+    <EditText
+        android:id="@+id/etEmailLogin"
+        android:layout_width="297dp"
+        android:layout_height="48dp"
+        android:background="@drawable/border"
+        android:fontFamily="@font/poppins_rg"
+        android:hint="input your email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="24dp"
+        android:textColor="@color/text_color_register"
+        android:textSize="16sp" />
 
 
     <TextView
-        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Password"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/poppins_semibold"
+        android:text="Password"
+        android:textColor="@color/text_color_register"
         android:textSize="16sp"
-        android:textStyle=""
-        android:textColor="@color/text_color_register"/>
+        android:textStyle="" />
 
     <EditText
         android:id="@+id/etPasswordLogin"
         android:layout_width="297dp"
         android:layout_height="48dp"
-        android:hint="input your password"
-        android:textSize="16sp"
-        android:paddingStart="24dp"
-        android:inputType="textPassword"
-        android:textColor="@color/text_color_register"
+        android:background="@drawable/border"
         android:fontFamily="@font/poppins_rg"
-        android:background="@drawable/border"/>
+        android:hint="input your password"
+        android:inputType="textPassword"
+        android:paddingStart="24dp"
+        android:textColor="@color/text_color_register"
+        android:textSize="16sp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="20dp"
-        android:orientation="horizontal"
-        android:layout_marginVertical="15dp">
+        android:layout_marginVertical="15dp"
+        android:orientation="horizontal">
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Remember me"
             android:fontFamily="@font/poppins_rg"
-            android:textSize="12sp"
-            android:textColor="@color/text_color_register"/>
+            android:text="Remember me"
+            android:textColor="@color/text_color_register"
+            android:textSize="12sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
             android:layout_marginStart="60dp"
+            android:fontFamily="@font/poppins_semibold"
             android:text="Forgot Password?"
             android:textColor="@color/text_color_register"
-            android:fontFamily="@font/poppins_semibold"/>
+            android:textSize="12sp" />
 
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login"
-        android:layout_marginTop="10dp"
         android:layout_width="297dp"
         android:layout_height="48dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/border2"
-        android:textColor="@color/white"
-        android:text="Login"/>
+        android:text="Login"
+        android:textColor="@color/white" />
 
     <ImageView
         android:layout_width="297dp"
@@ -120,15 +120,15 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGoogle"
         android:layout_width="297dp"
         android:layout_height="48dp"
-        android:id="@+id/btnGoogle"
-        android:background="@drawable/border"
         android:layout_marginTop="20dp"
-        android:text="Login with Google"
+        android:background="@drawable/border"
         android:fontFamily="@font/poppins_bold"
+        android:text="Login with Google"
         android:textAllCaps="false"
-        android:textColor="@color/text_color_register"/>
+        android:textColor="@color/text_color_register" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -140,21 +140,21 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Don\'t have account?"
+            android:layout_marginStart="49dp"
             android:fontFamily="@font/poppins_rg"
+            android:text="Don\'t have account?"
             android:textColor="@color/text_color_register"
-            android:textSize="14sp"
-            android:layout_marginStart="49dp"/>
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="3dp"
-            android:text="Register"
             android:fontFamily="@font/poppins_bold"
+            android:text="Register"
             android:textColor="@color/text_color_register"
-            android:textSize="14sp"/>
+            android:textSize="14sp" />
 
     </LinearLayout>
 

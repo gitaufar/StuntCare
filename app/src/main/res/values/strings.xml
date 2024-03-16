@@ -24,12 +24,12 @@
     <string name="antiStunting">Anti Stunting</string>
     <string name="stunt">Stunt</string>
     <string name="care">Care</string>
-    <string name="anti">anti stunting</string>
+    <string name="anti">Anti-Stunting</string>
     <string name="inputYourData">Input your data and let the apps recomend your daily pregnancy needs.</string>
     <string name="inputData">Input Data</string>
     <string name="dailyUpdates">Daily Updates</string>
     <string name="weight">Weight</string>
-    <string name="beforePregnat">Before Pregnat</string>
+    <string name="beforePregnat">Before Pregnant</string>
     <string name="now">Now</string>
     <string name="kilogram">Kilogram</string>
     <string name="historyOfIllness">History of illness</string>
@@ -42,5 +42,7 @@
     <string name="postPregnancy">Post-pregnancy weight</string>
     <string name="inputpostpregnancy">Please input your post-pregnancy weight to help us provide a more accurate health and nutrition plan during your post-pregnancy journey.</string>
     <string name="inputIllnes">Please select or input your history of illness to help us provide a more accurate health and nutrition plan during your healthcare journey.</string>
-    <string name="whereYouCan">where you can obtain expert pregnancy advice on diet, exercise, precautions, and specific needs</string>
+    <string name="text">where you can obtain expert pregnancy advice on diet, exercise, precautions, and specific needs</string>
+    <string name="antistunting2text">Estimated date of birth</string>
+    <string name="recom">Recomendation Information</string>
 </resources>

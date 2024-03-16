@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/splash_bg"
+    android:orientation="vertical"
+    tools:context="com.example.stuntcare.PregnancyRestriction">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Anti Stunting"
+        android:textColor="@color/text_color_register"
+        android:textSize="30sp" />
+
+    <FrameLayout
+        android:layout_width="345dp"
+        android:layout_height="580dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/pemisah">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Pregnancy Restriction"
+            android:textColor="@color/text_color_register"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/exit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/close_24px" />
+
+        <ImageView
+            android:layout_width="159.22dp"
+            android:layout_height="140dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="88dp"
+            android:src="@drawable/pregnancyres" />
+
+        <TextView
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="240dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Recommendations based on your ilness history"
+            android:textAlignment="center"
+            android:textColor="@color/text_color_register"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="300dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Avoid:"
+            android:textColor="@color/text_color_register"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/avoid1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="330dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="-"
+            android:textColor="@color/text_color_register"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/avoid2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="360dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="-"
+            android:textColor="@color/text_color_register"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/avoid3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="390dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="-"
+            android:textColor="@color/text_color_register"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/avoid4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="420dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="-"
+            android:textColor="@color/text_color_register"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/avoid5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="450dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="-"
+            android:textColor="@color/text_color_register"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/avoid6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="480dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="-"
+            android:textColor="@color/text_color_register"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/avoid7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="520dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="-"
+            android:textColor="@color/text_color_register"
+            android:textSize="12sp" />
+
+
+    </FrameLayout>
+
+</LinearLayout>

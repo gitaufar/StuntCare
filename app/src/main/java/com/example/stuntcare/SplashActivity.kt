@@ -6,7 +6,6 @@ import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.raon.HomeActivity
 import com.example.raon.MainActivity
 import com.example.raon.R
 import com.google.firebase.Firebase
@@ -28,7 +27,7 @@ class SplashActivity : AppCompatActivity() {
                     val ref = database.getReference(currentUser?.uid!!)
                     ref.child("nama").get().addOnSuccessListener {
                         if(it.exists()) {
-                            val intent = Intent(this, HomeActivity::class.java)
+                            val intent = Intent(this, ProfilActivity::class.java)
                             startActivity(intent)
                             finish()
                         } else {
@@ -42,6 +41,7 @@ class SplashActivity : AppCompatActivity() {
                 } else {
                     Intent(this, MainActivity::class.java).also {
                         startActivity(it)
+                        finish()
                     }
                 }
         },2000L)
