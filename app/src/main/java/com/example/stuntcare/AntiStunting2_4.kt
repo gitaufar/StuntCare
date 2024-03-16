@@ -17,6 +17,7 @@ class AntiStunting2_4 : AppCompatActivity() {
 
 //        val imageView11 = findViewById<ImageView>(R.id.imageView11)
         val nextButton = findViewById<Button>(R.id.button7)
+        val editTextWeight: EditText = findViewById(R.id.editTextWeight1)
 
 
         nextButton.setOnClickListener {

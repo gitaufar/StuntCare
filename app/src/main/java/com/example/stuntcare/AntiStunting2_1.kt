@@ -56,8 +56,10 @@ class AntiStunting2_1 : AppCompatActivity() {
 
         buttonNext.setOnClickListener {
             val lastPeriod = editTextDate.text.toString()
-            ref.child("lastPeriod").setValue(lastPeriod)
-            navigateToNextPage()
+            if(lastPeriod != "") {
+                ref.child("lastPeriod").setValue(lastPeriod)
+                navigateToNextPage()
+            }
         }
     }
 
