@@ -14,6 +14,17 @@ class AntiStunting2_5 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_anti_stunting25)
 
+        val editTextIllness = findViewById<EditText>(R.id.editTextText10)
+        val nextButton = findViewById<Button>(R.id.button11)
+
+        nextButton.setOnClickListener {
+            val illness = editTextIllness.text.toString()
+
+            val intent = Intent(this, AntiStunting2_4::class.java)
+            intent.putExtra("illness", illness)
+            startActivity(intent)
+        }
+
         val btnListIllness = findViewById<Button>(R.id.btnListIllness)
         btnListIllness.setOnClickListener {
             showIllnessAlertDialog()
