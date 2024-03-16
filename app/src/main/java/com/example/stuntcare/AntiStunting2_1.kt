@@ -1,6 +1,5 @@
 package com.example.stuntcare
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -21,7 +20,6 @@ class AntiStunting2_1 : AppCompatActivity() {
     private lateinit var calendarView: CalendarView
     private lateinit var buttonNext: Button
 
-    @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_anti_stunting21)
@@ -34,16 +32,20 @@ class AntiStunting2_1 : AppCompatActivity() {
         val db = Firebase.database
         val ref = db.getReference(currentUser?.uid!!)
 
+        // Sembunyikan calendarView saat awalnya
         calendarView.visibility = View.GONE
 
+        // Tampilkan calendarView ketika editTextDate diklik
         editTextDate.setOnClickListener {
             showCalendar()
         }
 
+        // Tampilkan calendarView ketika imageViewCalendar diklik
         imageViewCalendar.setOnClickListener {
             showCalendar()
         }
 
+        // Atur DatePickerDialog saat tanggal dipilih di calendarView
         calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
             val selectedDate = "$dayOfMonth/${month + 1}/$year"
             editTextDate.setText(selectedDate)
@@ -54,30 +56,23 @@ class AntiStunting2_1 : AppCompatActivity() {
 
         buttonNext.setOnClickListener {
             val lastPeriod = editTextDate.text.toString()
-            ref.child("lastPeriod").setValue(lastPeriod)
-            navigateToNextPage(lastPeriod)
+            if(lastPeriod != "") {
+                ref.child("lastPeriod").setValue(lastPeriod)
+                navigateToNextPage()
+            }
         }
-
-        val imageViewBack = findViewById<ImageView>(R.id.imageView16)
-        imageViewBack.setOnClickListener {
-            onBackPressed()
-
-        }
-
-    }
-
-    private fun navigateToNextPage(lastPeriod: String) {
-        val intent = Intent(this, AntiStunting2_3::class.java)
-        intent.putExtra("lastPeriod", lastPeriod)
-        startActivity(intent)
     }
 
     private fun showCalendar() {
         calendarView.visibility = View.VISIBLE
-
     }
 
     private fun hideCalendar() {
         calendarView.visibility = View.GONE
+    }
+
+    private fun navigateToNextPage() {
+        val intent = Intent(this, AntiStunting2_3::class.java)
+        startActivity(intent)
     }
 }

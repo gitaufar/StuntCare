@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.raon.R
+import com.example.raon.R.layout.number
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
@@ -53,7 +54,7 @@ class AntiStunting2_4 : AppCompatActivity() {
 
     private fun showBottomSheet() {
         val dialog = BottomSheetDialog(this)
-        val bottomSheetView = layoutInflater.inflate(R.layout.number, null)
+        val bottomSheetView = layoutInflater.inflate(number, null)
 
         val bottomSheetButtonClickListener = View.OnClickListener { view ->
             val button = view as Button

@@ -43,27 +43,29 @@ class AntiStuntingFragment : Fragment() {
         val flFood: FrameLayout = view.findViewById(R.id.food)
         val flExercise: FrameLayout = view.findViewById(R.id.exercise)
         val flPreg: FrameLayout = view.findViewById(R.id.pregnancy)
+        val btnInput: AppCompatButton = view.findViewById(R.id.button4)
+        val btnUpdate: AppCompatButton = view.findViewById(R.id.update)
 
-        flExercise.setOnClickListener(){
-            Intent(requireActivity(),ExerciseOutput::class.java).also{
+        flExercise.setOnClickListener() {
+            Intent(requireActivity(), ExerciseOutput::class.java).also {
                 startActivity(it)
             }
         }
 
-        flFood.setOnClickListener(){
-            Intent(requireActivity(),FoodOutputActivity::class.java).also{
+        flFood.setOnClickListener() {
+            Intent(requireActivity(), FoodOutputActivity::class.java).also {
                 startActivity(it)
             }
         }
 
-        flNutrition.setOnClickListener(){
-            Intent(requireActivity(),NutritionOutputActivity::class.java).also{
+        flNutrition.setOnClickListener() {
+            Intent(requireActivity(), NutritionOutputActivity::class.java).also {
                 startActivity(it)
             }
         }
 
-        flPreg.setOnClickListener(){
-            Intent(requireActivity(),PregnancyRestriction::class.java).also{
+        flPreg.setOnClickListener() {
+            Intent(requireActivity(), PregnancyRestriction::class.java).also {
                 startActivity(it)
             }
         }
@@ -71,7 +73,7 @@ class AntiStuntingFragment : Fragment() {
         flExist.visibility = View.GONE
 
         ref.child("lastPeriod").get().addOnSuccessListener {
-            if (it.exists()){
+            if (it.exists() && it.value != "") {
                 flEmpty.visibility = View.GONE
                 flExist.visibility = View.VISIBLE
                 textKelahiran.text = tanggalLahir(it.value.toString())
@@ -80,17 +82,33 @@ class AntiStuntingFragment : Fragment() {
                 flExist.visibility = View.GONE
             }
         }
-
-        val btnInput: AppCompatButton = view.findViewById(R.id.button4)
-        btnInput.setOnClickListener(){
-            Intent(requireActivity(), AntiStunting2_1::class.java).also{
+        btnUpdate.setOnClickListener() {
+            Intent(requireActivity(), AntiStunting2_1::class.java).also {
+                startActivity(it)
+            }
+            }
+        btnInput.setOnClickListener() {
+            Intent(requireActivity(), AntiStunting2_1::class.java).also {
                 startActivity(it)
             }
         }
     }
 
     private fun tanggalLahir(date: String): String {
-        val bulan = arrayOf("January","February","March","April","May","June","July","August","September","October","November","December")
+        val bulan = arrayOf(
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+        )
         val tanggal = date
         val tanggalSplit = tanggal.split("/")
         val tanggalInt = IntArray(tanggalSplit.size)
@@ -142,3 +160,4 @@ class AntiStuntingFragment : Fragment() {
         return "${tanggalInt[0]} ${bulan[tanggalInt[1] - 1]} ${tanggalInt[2]}"
     }
 }
+
