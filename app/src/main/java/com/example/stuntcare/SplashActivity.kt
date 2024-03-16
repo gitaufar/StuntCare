@@ -27,7 +27,7 @@ class SplashActivity : AppCompatActivity() {
                     val ref = database.getReference(currentUser?.uid!!)
                     ref.child("nama").get().addOnSuccessListener {
                         if(it.exists()) {
-                            val intent = Intent(this, ProfilActivity::class.java)
+                            val intent = Intent(this, MainActivity2::class.java)
                             startActivity(intent)
                             finish()
                         } else {

@@ -45,4 +45,7 @@
     <string name="text">where you can obtain expert pregnancy advice on diet, exercise, precautions, and specific needs</string>
     <string name="antistunting2text">Estimated date of birth</string>
     <string name="recom">Recomendation Information</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="update">Update your recommendations</string>
 </resources>

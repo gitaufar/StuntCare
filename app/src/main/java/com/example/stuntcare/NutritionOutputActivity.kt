@@ -19,7 +19,7 @@ class NutritionOutputActivity : AppCompatActivity() {
         val ref = database.getReference(currentUser?.uid!!)
         val exit: ImageView = findViewById(R.id.exit)
         exit.setOnClickListener() {
-            Intent(this, AntiStunting4::class.java).also {
+            Intent(this, MainActivity2::class.java).also {
                 startActivity(it)
             }
         }

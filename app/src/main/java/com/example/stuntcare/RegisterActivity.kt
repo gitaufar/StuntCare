@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.stuntcare.MainActivity2
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -158,7 +159,7 @@ class RegisterActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     val user = firebaseAuth.currentUser
                     // TODO: Handle successful sign-in\
-                    Intent(this,HomeActivity::class.java).also{
+                    Intent(this,MainActivity2::class.java).also{
                         startActivity(it)
                     }
                 } else {
