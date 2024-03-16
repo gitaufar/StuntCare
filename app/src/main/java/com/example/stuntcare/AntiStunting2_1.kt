@@ -58,6 +58,11 @@ class AntiStunting2_1 : AppCompatActivity() {
             navigateToNextPage(lastPeriod)
         }
 
+        val imageViewBack = findViewById<ImageView>(R.id.imageView16)
+        imageViewBack.setOnClickListener {
+
+        }
+
     }
 
     private fun navigateToNextPage(lastPeriod: String) {
