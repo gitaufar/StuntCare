@@ -1,53 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
+    android:layout_height="match_parent">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         app:cardCornerRadius="32dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
+
 
             <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="169dp"
-                android:layout_height="169dp"
-                android:layout_marginStart="112dp"
-                android:layout_marginTop="28dp"
-                app:srcCompat="@drawable/woman_office_1" />
+                android:id="@+id/imageView7"
+                android:layout_width="192dp"
+                android:layout_height="192dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="101dp"
+                app:srcCompat="@drawable/pregnant_calendar_1" />
 
             <TextView
-                android:id="@+id/textView17"
-                android:layout_width="305dp"
+                android:id="@+id/textView34"
+                android:layout_width="298dp"
                 android:layout_height="28dp"
-                android:layout_marginStart="44dp"
+                android:layout_marginStart="47dp"
                 android:layout_marginTop="184dp"
-                android:text="Account created successfully"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Your data has been recorded"
                 android:textColor="@color/text_color_register"
-                android:textSize="20sp"
-                android:fontFamily="@font/poppins_bold"/>
+                android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView33"
-                android:layout_width="185dp"
+                android:id="@+id/textView35"
+                android:layout_width="311dp"
                 android:layout_height="20dp"
-                android:layout_marginStart="105dp"
+                android:layout_marginStart="42dp"
                 android:layout_marginTop="212dp"
-                android:text="Let’s login to your account"
+                android:text="Let’s see your healthcare recommendations"
                 android:textColor="@color/text_color_register"
                 android:textSize="14sp"
                 android:fontFamily="@font/poppins_rg"/>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/buttonLogin"
+                android:id="@+id/buttonRecomendation"
                 android:layout_width="297dp"
                 android:layout_height="46dp"
                 android:layout_marginStart="48dp"
@@ -55,9 +53,8 @@
                 android:background="@drawable/border2"
                 android:backgroundTint="@color/text_color_register"
                 android:fontFamily="@font/poppins_bold"
-                android:text="Login"
+                android:text="See Reconmendation"
                 android:textAllCaps="false"
-
                 android:textColor="@color/white"
                 android:textSize="16sp" />
 
