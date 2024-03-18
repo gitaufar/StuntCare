@@ -32,20 +32,16 @@ class AntiStunting2_1 : AppCompatActivity() {
         val db = Firebase.database
         val ref = db.getReference(currentUser?.uid!!)
 
-        // Sembunyikan calendarView saat awalnya
         calendarView.visibility = View.GONE
 
-        // Tampilkan calendarView ketika editTextDate diklik
         editTextDate.setOnClickListener {
             showCalendar()
         }
 
-        // Tampilkan calendarView ketika imageViewCalendar diklik
         imageViewCalendar.setOnClickListener {
             showCalendar()
         }
 
-        // Atur DatePickerDialog saat tanggal dipilih di calendarView
         calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
             val selectedDate = "$dayOfMonth/${month + 1}/$year"
             editTextDate.setText(selectedDate)
