@@ -90,7 +90,7 @@ class AntiStunting2_3 : AppCompatActivity() {
 
         val buttonOK = bottomSheetView.findViewById<Button>(R.id.button10)
         buttonOK.setOnClickListener {
-            dialog.dismiss() // Tutup BottomSheet
+            dialog.dismiss()
         }
 
         val buttonComma = bottomSheetView.findViewById<Button>(R.id.buttonOK)

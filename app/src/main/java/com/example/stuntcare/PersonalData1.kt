@@ -20,6 +20,7 @@ class PersonalData1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_personal_data1)
+
         val database = Firebase.database
         val auth = FirebaseAuth.getInstance()
         val currentUser = auth.currentUser
@@ -33,7 +34,7 @@ class PersonalData1 : AppCompatActivity() {
 
         layout2.visibility = View.GONE
 
-        editTextDate.setOnClickListener(){
+        editTextDate.setOnClickListener() {
             layout2.visibility = View.VISIBLE
             layout.visibility = View.GONE
         }
@@ -52,7 +53,7 @@ class PersonalData1 : AppCompatActivity() {
                     var birthday = editTextDate.text.toString()
                 }
                 ref.setValue(data)
-                Intent(this, MainActivity2::class.java).also{
+                Intent(this, MainActivity2::class.java).also {
                     startActivity(it)
                 }
             } else {
@@ -61,3 +62,4 @@ class PersonalData1 : AppCompatActivity() {
         }
     }
 }
+

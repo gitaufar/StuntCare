@@ -145,5 +145,6 @@
                 android:textColor="@color/white" />
 
         </LinearLayout>
+
     </FrameLayout>
 </LinearLayout>
