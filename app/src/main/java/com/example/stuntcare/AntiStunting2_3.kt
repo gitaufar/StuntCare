@@ -41,13 +41,13 @@ class AntiStunting2_3 : AppCompatActivity() {
     }
 
     private fun navigateToNextPage() {
-        val weight = editTextWeight.text.toString().toDoubleOrNull()
-        if (weight != null) {
+        val preWeight = editTextWeight.text.toString().toDoubleOrNull()
+        if (preWeight != null) {
             val auth = FirebaseAuth.getInstance()
             val currentUser = auth.currentUser
             val db = Firebase.database
             val ref = db.getReference(currentUser?.uid!!)
-            ref.child("weight").setValue(weight)
+            ref.child("pre-pregnancy weight").setValue(preWeight)
 
             val intent = Intent(this, AntiStunting2_4::class.java)
             startActivity(intent)

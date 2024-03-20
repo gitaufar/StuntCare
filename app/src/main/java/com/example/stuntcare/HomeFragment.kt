@@ -39,7 +39,7 @@ class HomeFragment : Fragment() {
 
         btnLogout.setOnClickListener(){
             auth.signOut()
-            Intent(requireActivity(),MainActivity::class.java).also{
+            Intent(requireActivity(), MainActivity::class.java).also{
                 startActivity(it)
             }
         }

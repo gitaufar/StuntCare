@@ -46,6 +46,7 @@ class AntiStunting2_6 : AppCompatActivity() {
         val alergy = arrayOf("Egg", "Seafood", "Lactose intolerant", "Peanut")
         val checkedItems = booleanArrayOf(false, false, false, false)
 
+        val editTextAlergy = findViewById<EditText>(R.id.editTextText11)
         val buttonNext = findViewById<Button>(R.id.buttonNext)
         buttonNext.setOnClickListener {
 
@@ -79,9 +80,19 @@ class AntiStunting2_6 : AppCompatActivity() {
                     selectedAlergy.append(alergy[i]).append("\n")
                 }
             }
-            selectedAlergy.toString().let {
-                showToast("Selected Alergy:\n$it")
-            }
+
+            selectedAlergy.append(editTextAlergy.text.toString())
+
+            val historyOfAlergy = selectedAlergy.toString()
+            val auth = FirebaseAuth.getInstance()
+            val currentUser = auth.currentUser
+            val db = Firebase.database
+            val ref = db.getReference(currentUser?.uid!!)
+            ref.child("Alergy").setValue(historyOfAlergy)
+
+            editTextAlergy.setText(historyOfAlergy)
+            showToast("Selected Alergy:\n$historyOfAlergy")
+
         }
         builder.setNegativeButton("Cancel") { dialog, which ->
             dialog.dismiss()

@@ -44,6 +44,7 @@ class AntiStunting2_5 : AppCompatActivity() {
         val illnesses = arrayOf("Anemia", "Asma", "Diabetes", "Kanker")
         val checkedItems = booleanArrayOf(false, false, false, false)
 
+        val editTextIllness = findViewById<EditText>(R.id.editTextText10)
         val buttonNext = findViewById<Button>(R.id.buttonNext)
         buttonNext.setOnClickListener {
             val historyOfIllness = findViewById<EditText>(R.id.editTextText10).text.toString()
@@ -76,9 +77,17 @@ class AntiStunting2_5 : AppCompatActivity() {
                     selectedIllnesses.append(illnesses[i]).append("\n")
                 }
             }
-            selectedIllnesses.toString().let {
-                showToast("Selected Illnesses:\n$it")
-            }
+
+            val historyOfIllness = selectedIllnesses.toString()
+            val auth = FirebaseAuth.getInstance()
+            val currentUser = auth.currentUser
+            val db = Firebase.database
+            val ref = db.getReference(currentUser?.uid!!)
+            ref.child("History Of Illness").setValue(historyOfIllness)
+
+            editTextIllness.setText(historyOfIllness)
+            showToast("Selected Illnesses:\n$historyOfIllness")
+
         }
         builder.setNegativeButton("Cancel") { dialog, which ->
             dialog.dismiss()
@@ -86,48 +95,6 @@ class AntiStunting2_5 : AppCompatActivity() {
         val dialog = builder.create()
         dialog.show()
     }
-
-//    private fun showIllnessAlertDialog() {
-//        val illnesses = arrayOf("Anemia", "Asma", "Diabetes", "Kanker")
-//        val checkedItems = booleanArrayOf(false, false, false, false)
-//
-//        val buttonNext = findViewById<Button>(R.id.buttonNext)
-//        buttonNext.setOnClickListener {
-//
-//            val historyOfIllness = findViewById<EditText>(R.id.editTextText10).text.toString()
-//
-//            val intent = Intent(this, AntiStunting2_6::class.java)
-//            intent.putExtra("historyOfIllness", historyOfIllness)
-//            startActivity(intent)
-//        }
-//
-//        val imageViewBack = findViewById<ImageView>(R.id.imageView17)
-//        imageViewBack.setOnClickListener {
-//
-//        }
-//
-//        val builder = AlertDialog.Builder(this)
-//        builder.setTitle("List of Illness")
-//        builder.setMultiChoiceItems(illnesses, checkedItems) { dialog, which, isChecked ->
-//
-//        }
-//        builder.setPositiveButton("OK") { dialog, which ->
-//            val selectedIllnesses = StringBuilder()
-//            for (i in checkedItems.indices) {
-//                if (checkedItems[i]) {
-//                    selectedIllnesses.append(illnesses[i]).append("\n")
-//                }
-//            }
-//            selectedIllnesses.toString().let {
-//                showToast("Selected Illnesses:\n$it")
-//            }
-//        }
-//        builder.setNegativeButton("Cancel") { dialog, which ->
-//            dialog.dismiss()
-//        }
-//        val dialog = builder.create()
-//        dialog.show()
-//    }
 
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
