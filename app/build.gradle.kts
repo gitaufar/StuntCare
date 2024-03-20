@@ -62,6 +62,7 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
     implementation(platform("androidx.compose:compose-bom:2024.02.02"))
+    implementation("androidx.appcompat:appcompat:1.6.1")
 }
 
 

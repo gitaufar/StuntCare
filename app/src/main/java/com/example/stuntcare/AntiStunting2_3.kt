@@ -22,11 +22,6 @@ class AntiStunting2_3 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_anti_stunting23)
 
-        val auth = FirebaseAuth.getInstance()
-        val currentUser = auth.currentUser
-        val db = Firebase.database
-        val ref = db.getReference(currentUser?.uid!!)
-
         editTextWeight = findViewById(R.id.editTextWeight)
 
         editTextWeight.setOnClickListener {
@@ -46,8 +41,18 @@ class AntiStunting2_3 : AppCompatActivity() {
     }
 
     private fun navigateToNextPage() {
-        val intent = Intent(this, AntiStunting2_4::class.java)
-        startActivity(intent)
+        val weight = editTextWeight.text.toString().toDoubleOrNull()
+        if (weight != null) {
+            val auth = FirebaseAuth.getInstance()
+            val currentUser = auth.currentUser
+            val db = Firebase.database
+            val ref = db.getReference(currentUser?.uid!!)
+            ref.child("weight").setValue(weight)
+
+            val intent = Intent(this, AntiStunting2_4::class.java)
+            startActivity(intent)
+        }
+
 
     }
 
