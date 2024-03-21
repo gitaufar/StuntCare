@@ -37,9 +37,9 @@
     <string name="lastMenstrualPeriod">Last Menstrual Period</string>
     <string name="pleaseInput">Please input the first day of your last menstrual period to find out the estimated due date of your baby.</string>
     <string name="date">Date</string>
-    <string name="prePregnancyWeight">Pre-pregnancy weight</string>
+    <string name="prePregnancyWeight">Pre-pregnant</string>
     <string name="inputyourprepregnancy">Please input your pre-pregnancy weight to help us provide a more accurate health and nutrition plan during your pregnancy journey.</string>
-    <string name="postPregnancy">Post-pregnancy weight</string>
+    <string name="postPregnancy">Post-pregnant</string>
     <string name="inputpostpregnancy">Please input your post-pregnancy weight to help us provide a more accurate health and nutrition plan during your post-pregnancy journey.</string>
     <string name="inputIllnes">Please select or input your history of illness to help us provide a more accurate health and nutrition plan during your healthcare journey.</string>
     <string name="text">where you can obtain expert pregnancy advice on diet, exercise, precautions, and specific needs</string>
@@ -63,4 +63,7 @@
     <string name="logout_text">Are you sure want to logout?</string>
     <string name="btn_cancel">Cancel</string>
     <string name="btn_logout">Logout</string>
+    <string name="detail">See Details</string>
+    <string name="allergy">Allergy</string>
+    <string name="no_data">No data</string>
 </resources>
