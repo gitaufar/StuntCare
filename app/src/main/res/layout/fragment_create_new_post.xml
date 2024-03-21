@@ -293,7 +293,7 @@
         android:layout_height="122dp"
         android:layout_marginTop="130dp"
         android:layout_marginStart="24dp"
-        android:background="@drawable/uploadImage"/>
+        android:background="@drawable/upload_image"/>
 
 
 
