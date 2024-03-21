@@ -29,12 +29,12 @@ class MainActivity2 : AppCompatActivity() {
                 }
 
                 R.id.bottom_procare -> {
-                    replaceFragment(HomeFragment())
+                    replaceFragment(ProCareFragment())
                     true
                 }
 
                 R.id.bottom_stream -> {
-                    replaceFragment(HomeFragment())
+                    replaceFragment(StreamFragment())
                     true
                 }
 
