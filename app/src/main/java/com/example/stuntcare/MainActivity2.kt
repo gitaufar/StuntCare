@@ -34,7 +34,7 @@ class MainActivity2 : AppCompatActivity() {
                 }
 
                 R.id.bottom_stream -> {
-                    replaceFragment(HomeFragment())
+                    replaceFragment(StreamFragment())
                     true
                 }
 
