@@ -51,14 +51,6 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-//        val loginButton = findViewById<Button>(R.id.login)
-//        loginButton.setOnClickListener {
-//            // Membuat Intent untuk berpindah ke halaman AntiStunting2
-//            val intent = Intent(this, AntiStunting2::class.java)
-//            // Memulai aktivitas baru dengan Intent
-//            startActivity(intent)
-//        }
-
         btnGoogle.setOnClickListener(){
             signInWithGoogle()
         }
@@ -75,11 +67,14 @@ class LoginActivity : AppCompatActivity() {
                         ref.child("nama").get().addOnSuccessListener {
                             if(it.exists()) {
                                 val intent = Intent(this, MainActivity2::class.java)
+                                ref.child("email").setValue(etEmail.text.toString())
                                 Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
                                 startActivity(intent)
                                 finish()
                             } else {
-                                val intent = Intent(this, PersonalData1::class.java)
+                                val intent = Intent(this, PersonalData1::class.java).also {
+                                    ref.child("email").setValue(etEmail.text.toString())
+                                }
                                 Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
                                 startActivity(intent)
                                 finish()
