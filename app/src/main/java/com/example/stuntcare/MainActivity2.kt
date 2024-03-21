@@ -29,7 +29,7 @@ class MainActivity2 : AppCompatActivity() {
                 }
 
                 R.id.bottom_procare -> {
-                    replaceFragment(HomeFragment())
+                    replaceFragment(ProCareFragment())
                     true
                 }
 

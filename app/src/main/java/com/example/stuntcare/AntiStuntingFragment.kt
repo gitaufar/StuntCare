@@ -10,6 +10,7 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
 import com.example.raon.R
 import com.example.stuntcare.AntiStunting2_1
+import com.example.stuntcare.AntiStunting4
 import com.example.stuntcare.ExerciseOutput
 import com.example.stuntcare.FoodOutputActivity
 import com.example.stuntcare.NutritionOutputActivity
@@ -45,6 +46,13 @@ class AntiStuntingFragment : Fragment() {
         val flPreg: FrameLayout = view.findViewById(R.id.pregnancy)
         val btnInput: AppCompatButton = view.findViewById(R.id.button4)
         val btnUpdate: AppCompatButton = view.findViewById(R.id.update)
+        val btnDetail: AppCompatButton = view.findViewById(R.id.detail)
+
+        btnDetail.setOnClickListener(){
+            Intent(requireActivity(),AntiStunting4::class.java).also{
+                startActivity(it)
+            }
+        }
 
         flExercise.setOnClickListener() {
             Intent(requireActivity(), ExerciseOutput::class.java).also {

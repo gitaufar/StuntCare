@@ -144,7 +144,18 @@
                     android:layout_marginTop="113dp"
                     android:fontFamily="@font/poppins_semibold"
                     android:text=""/>
-
+                
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/detail"
+                    android:layout_width="148dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="150dp"
+                    android:background="@drawable/border2"
+                    android:text="@string/detail"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textAllCaps="false"/>
             </FrameLayout>
 
             <FrameLayout

@@ -72,9 +72,8 @@ class LoginActivity : AppCompatActivity() {
                                 startActivity(intent)
                                 finish()
                             } else {
-                                val intent = Intent(this, PersonalData1::class.java).also {
-                                    ref.child("email").setValue(etEmail.text.toString())
-                                }
+                                val intent = Intent(this, PersonalData1::class.java)
+                                ref.child("email").setValue(etEmail.text.toString())
                                 Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
                                 startActivity(intent)
                                 finish()
