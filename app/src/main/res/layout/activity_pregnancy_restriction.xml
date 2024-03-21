@@ -79,7 +79,7 @@
             android:layout_marginStart="27dp"
             android:layout_marginTop="330dp"
             android:fontFamily="@font/poppins_medium"
-            android:text="-"
+            android:text=""
             android:textColor="@color/text_color_register"
             android:textSize="12sp" />
 
@@ -90,7 +90,7 @@
             android:layout_marginStart="27dp"
             android:layout_marginTop="360dp"
             android:fontFamily="@font/poppins_medium"
-            android:text="-"
+            android:text=""
             android:textColor="@color/text_color_register"
             android:textSize="12sp" />
 
@@ -101,7 +101,7 @@
             android:layout_marginStart="27dp"
             android:layout_marginTop="390dp"
             android:fontFamily="@font/poppins_medium"
-            android:text="-"
+            android:text=""
             android:textColor="@color/text_color_register"
             android:textSize="12sp" />
 
@@ -112,7 +112,7 @@
             android:layout_marginStart="27dp"
             android:layout_marginTop="420dp"
             android:fontFamily="@font/poppins_medium"
-            android:text="-"
+            android:text=""
             android:textColor="@color/text_color_register"
             android:textSize="12sp" />
 
@@ -123,33 +123,10 @@
             android:layout_marginStart="27dp"
             android:layout_marginTop="450dp"
             android:fontFamily="@font/poppins_medium"
-            android:text="-"
+            android:text=""
             android:textColor="@color/text_color_register"
             android:textSize="12sp" />
-
-        <TextView
-            android:id="@+id/avoid6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="27dp"
-            android:layout_marginTop="480dp"
-            android:fontFamily="@font/poppins_medium"
-            android:text="-"
-            android:textColor="@color/text_color_register"
-            android:textSize="12sp" />
-
-        <TextView
-            android:id="@+id/avoid7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="27dp"
-            android:layout_marginTop="520dp"
-            android:fontFamily="@font/poppins_medium"
-            android:text="-"
-            android:textColor="@color/text_color_register"
-            android:textSize="12sp" />
-
-
+        
     </FrameLayout>
 
 </LinearLayout>
