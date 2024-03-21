@@ -31,6 +31,7 @@ class PersonalData1 : AppCompatActivity() {
         val layout: LinearLayout = findViewById(R.id.layout)
         val layout2: LinearLayout = findViewById(R.id.layout2)
         val editTextDate: EditText = findViewById(R.id.date)
+        ref.child("email").setValue(intent.getStringExtra("EMAIL"))
 
         layout2.visibility = View.GONE
 
