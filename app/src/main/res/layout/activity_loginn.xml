@@ -4,10 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="48dp"
     android:background="@color/white"
     android:orientation="vertical"
     tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginStart="48dp">
 
     <ImageView
         android:layout_width="108dp"
@@ -157,6 +163,7 @@
             android:textColor="@color/text_color_register"
             android:textSize="14sp" />
 
+    </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
