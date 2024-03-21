@@ -67,4 +67,6 @@
     <string name="detail">See Details</string>
     <string name="allergy">Allergy</string>
     <string name="no_data">No data</string>
+    <string name="coming">Coming</string>
+    <string name="Soon">Soon</string>
 </resources>
