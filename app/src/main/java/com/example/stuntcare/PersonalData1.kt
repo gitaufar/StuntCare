@@ -55,11 +55,10 @@ class PersonalData1 : AppCompatActivity() {
 
         btnConfirm.setOnClickListener() {
             if (etNama.text.toString() != "") {
-                val data = object {
-                    var nama = etNama.text.toString()
-                    var birthday = editTextDate.text.toString()
-                }
-                ref.setValue(data)
+                    val nama = etNama.text.toString()
+                    val birthday = editTextDate.text.toString()
+                ref.child("nama").setValue(nama)
+                ref.child("birthday").setValue(birthday)
                 Intent(this, MainActivity2::class.java).also {
                     startActivity(it)
                 }

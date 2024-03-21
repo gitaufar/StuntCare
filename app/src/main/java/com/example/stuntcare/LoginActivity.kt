@@ -66,14 +66,15 @@ class LoginActivity : AppCompatActivity() {
                         val ref = database.getReference(currentUser?.uid!!)
                         ref.child("nama").get().addOnSuccessListener {
                             if(it.exists()) {
+                                ref.child("email").setValue(etEmail.text.toString())
                                 val intent = Intent(this, MainActivity2::class.java)
                                 ref.child("email").setValue(etEmail.text.toString())
                                 Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
                                 startActivity(intent)
                                 finish()
                             } else {
-                                val intent = Intent(this, PersonalData1::class.java)
                                 ref.child("email").setValue(etEmail.text.toString())
+                                val intent = Intent(this, PersonalData1::class.java)
                                 Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
                                 startActivity(intent)
                                 finish()
